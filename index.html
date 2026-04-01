@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOMED & CO // DROP #01 - EXCLUSIVE BUNDLE</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat for uppercase aggressive headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0a',      // Pitch Black background
+                            panel: '#141414',     // Slightly lighter black for cards
+                            border: '#262626',    // Dark grey borders
+                            accent: '#ccff00',    // Neon Volt (Hypebeast signature)
+                            action: '#25D366',    // WA Green
+                            alert: '#ff3366',     // Neon Red for urgency
+                            muted: '#888888'      // Dimmed text
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Urban Glow & Fade Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            animation: none;
+        }
+        .animate-on-scroll.is-visible {
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        
+        /* Neon Button Hover Effect */
+        .neon-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(204, 255, 0, 0.1);
+        }
+        .neon-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(204, 255, 0, 0.4);
+        }
+        
+        /* Custom Scrollbar for Dark Mode */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #262626; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ccff00; }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-300 font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-black">
+
+    <!-- FAKE NOTIFIKASI BAWAH KIRI (Dark Mode) -->
+    <div id="fake-notification" class="fixed bottom-6 left-4 md:left-6 z-50 bg-brand-panel border border-brand-border rounded-xl shadow-2xl p-4 flex items-center space-x-4 transition-all duration-500 transform translate-y-32 opacity-0 max-w-xs md:max-w-sm">
+        <div class="bg-brand-accent w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-black">
+            <i class="fas fa-shopping-bag text-xl"></i>
+        </div>
+        <div>
+            <p class="text-xs text-brand-muted font-mono uppercase tracking-widest mb-1">Live Update</p>
+            <p class="text-sm font-semibold text-white leading-tight">
+                <span id="notify-name" class="text-brand-accent font-bold">Budi</span> ( <span id="notify-city">Jakarta</span> ) <br>
+                <span id="notify-action" class="font-normal text-gray-400 text-xs">sedang mengamankan paket</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- 1. HERO SECTION (Hype Drop Vibe) -->
+    <header class="bg-brand-dark text-white relative pt-20 pb-24 px-4 overflow-hidden border-b border-brand-border">
+        <!-- Abstract Dark Grid Background -->
+        <div class="absolute inset-0 z-0 opacity-20" style="background-image: linear-gradient(#262626 1px, transparent 1px), linear-gradient(90deg, #262626 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <!-- Center Glow -->
+        <div class="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-brand-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center mt-8">
+            <!-- Top Badges -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <div class="inline-flex items-center bg-brand-alert/20 text-brand-alert border border-brand-alert/50 font-mono font-bold uppercase tracking-widest px-4 py-1.5 text-xs">
+                    <span class="w-2 h-2 rounded-full bg-brand-alert animate-pulse mr-2"></span>
+                    LIMITED DROP
+                </div>
+                <div class="inline-flex items-center bg-brand-panel text-white border border-brand-border font-mono font-medium px-4 py-1.5 text-xs tracking-wider">
+                    <i class="fas fa-eye mr-2 text-brand-accent"></i>
+                    <span id="live-viewers" class="font-bold mr-1 text-brand-accent">33</span> VIEWERS
+                </div>
+            </div>
+            
+            <!-- Hype Headline -->
+            <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-black text-white leading-none mb-6 tracking-tighter uppercase">
+                TAMPIL MAKSIMAL.<br>
+                <span class="text-brand-accent inline-block mt-2" style="text-shadow: 0 0 40px rgba(204,255,0,0.4);">
+                    CUMA 150K.
+                </span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-brand-muted font-medium mb-10 leading-relaxed max-w-2xl mx-auto">
+                Bukan barang obral. 5 Item eksklusif gaya streetwear dari ujung kepala hingga kaki. Kualitas premium, harga minimum.
+            </p>
+            
+            <!-- Trust Badges (Monochrome style) -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                <div class="flex items-center text-sm font-bold text-white bg-brand-panel px-5 py-3 border border-brand-border uppercase tracking-widest">
+                    <i class="fas fa-truck text-brand-accent mr-3 text-lg"></i> FREE ONGKIR
+                </div>
+                <div class="flex items-center text-sm font-bold text-white bg-brand-panel px-5 py-3 border border-brand-border uppercase tracking-widest">
+                    <i class="fas fa-box-open text-brand-accent mr-3 text-lg"></i> BISA COD
+                </div>
+            </div>
+            
+            <!-- Hero CTA -->
+            <div class="flex justify-center">
+                <a href="#order-section" class="neon-btn bg-brand-accent text-black font-heading font-black text-xl md:text-2xl px-12 py-5 shadow-lg flex items-center justify-center gap-3 w-full sm:w-auto uppercase tracking-wide">
+                    SECURE YOUR BUNDLE <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. SECTION ISI PAKET (Dark Cards) -->
+    <section class="py-24 px-4 max-w-7xl mx-auto bg-brand-dark">
+        <div class="text-center mb-16 animate-on-scroll">
+            <h2 class="font-heading text-4xl md:text-5xl font-black text-white mb-4 tracking-tighter uppercase">
+                WHAT'S INSIDE?
+            </h2>
+            <p class="text-brand-muted text-lg max-w-2xl mx-auto">Satu paket lengkap senilai <span class="text-white line-through">Rp 200.000</span>. Kini bisa lu miliki dengan harga jauh lebih hemat.</p>
+        </div>
+
+        <!-- Grid Items 4 Kolom -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Item 1 -->
+            <div class="bg-brand-panel rounded-xl p-5 border border-brand-border hover:border-brand-accent transition-all duration-300 group animate-on-scroll">
+                <div class="aspect-square bg-white rounded-lg mb-5 overflow-hidden relative flex items-center justify-center p-4">
+                    <span class="absolute top-3 left-3 bg-black text-brand-accent text-xs font-mono font-bold px-3 py-1 z-10 border border-brand-accent">ITEM // 01</span>
+                    <img src="images/kaos%20sablon.jpg" alt="Kaos Distro" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h3 class="font-heading font-black text-xl text-white mb-2 uppercase">Kaos Premium</h3>
+                <p class="text-sm text-brand-muted mb-6 leading-relaxed">100% Cotton Combed 24s. Menyerap keringat, sablon plastisol anti pecah kualitas distro.</p>
+                <div class="mt-auto border-t border-brand-border pt-4 flex justify-between items-end">
+                    <span class="text-xs text-brand-muted font-mono uppercase">Retail</span>
+                    <span class="font-bold text-white">Rp 100.000</span>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="bg-brand-panel rounded-xl p-5 border border-brand-border hover:border-brand-accent transition-all duration-300 group animate-on-scroll" style="animation-delay: 100ms;">
+                <div class="aspect-square bg-white rounded-lg mb-5 overflow-hidden relative flex items-center justify-center p-4">
+                    <span class="absolute top-3 left-3 bg-black text-brand-accent text-xs font-mono font-bold px-3 py-1 z-10 border border-brand-accent">ITEM // 02</span>
+                    <img src="images/underwear.jpg" alt="Underwear Pria" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h3 class="font-heading font-black text-xl text-white mb-2 uppercase">Underwear</h3>
+                <p class="text-sm text-brand-muted mb-6 leading-relaxed">Material katun spandex premium. Sirkulasi udara maksimal, nyaman dipakai gerak seharian.</p>
+                <div class="mt-auto border-t border-brand-border pt-4 flex justify-between items-end">
+                    <span class="text-xs text-brand-muted font-mono uppercase">Retail</span>
+                    <span class="font-bold text-white">Rp 30.000</span>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-brand-panel rounded-xl p-5 border border-brand-border hover:border-brand-accent transition-all duration-300 group animate-on-scroll" style="animation-delay: 200ms;">
+                <div class="aspect-square bg-white rounded-lg mb-5 overflow-hidden relative flex items-center justify-center p-4">
+                    <span class="absolute top-3 left-3 bg-black text-brand-accent text-xs font-mono font-bold px-3 py-1 z-10 border border-brand-accent">ITEM // 03</span>
+                    <img src="images/kacamata.jpg" alt="Kacamata Sunmori" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h3 class="font-heading font-black text-xl text-white mb-2 uppercase">Kacamata Street</h3>
+                <p class="text-sm text-brand-muted mb-6 leading-relaxed">Lensa anti-silau, frame polikarbonat. Aksesoris wajib buat sunmori atau sekadar nongkrong.</p>
+                <div class="mt-auto border-t border-brand-border pt-4 flex justify-between items-end">
+                    <span class="text-xs text-brand-muted font-mono uppercase">Retail</span>
+                    <span class="font-bold text-white">Rp 35.000</span>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="bg-brand-panel rounded-xl p-5 border border-brand-border hover:border-brand-accent transition-all duration-300 group animate-on-scroll" style="animation-delay: 300ms;">
+                <div class="aspect-square bg-white rounded-lg mb-5 overflow-hidden relative flex items-center justify-center p-4">
+                    <span class="absolute top-3 left-3 bg-black text-brand-accent text-xs font-mono font-bold px-3 py-1 z-10 border border-brand-accent">ITEM // 04</span>
+                    <img src="images/topi.jpg" alt="Topi Distro" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h3 class="font-heading font-black text-xl text-white mb-2 uppercase">Topi Eksklusif</h3>
+                <p class="text-sm text-brand-muted mb-6 leading-relaxed">Kanvas twill kokoh dengan strap adjustable. Penyelamat gaya saat rambut lagi gak bersahabat.</p>
+                <div class="mt-auto border-t border-brand-border pt-4 flex justify-between items-end">
+                    <span class="text-xs text-brand-muted font-mono uppercase">Retail</span>
+                    <span class="font-bold text-white">Rp 35.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECTION KEUNGGULAN (Dark Industrial) -->
+    <section class="bg-black py-24 px-4 border-y border-brand-border relative">
+        <div class="max-w-6xl mx-auto animate-on-scroll relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-5xl font-black text-white mb-4 tracking-tighter uppercase">
+                    WHY YOU NEED THIS
+                </h2>
+                <div class="w-20 h-1 bg-brand-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Point 1 -->
+                <div class="text-center px-4">
+                    <div class="w-20 h-20 mx-auto bg-brand-panel text-brand-accent rounded-none border border-brand-border flex items-center justify-center text-3xl mb-6 shadow-sm transform rotate-3">
+                        <i class="fas fa-gem transform -rotate-3"></i>
+                    </div>
+                    <h3 class="font-heading font-black text-xl mb-3 text-white uppercase tracking-wide">KUALITAS DISTRO</h3>
+                    <p class="text-brand-muted leading-relaxed">Bukan barang sisaan. Material pilihan terbaik yang awet dan nyaman lu pakai tempur tiap hari.</p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="text-center px-4">
+                    <div class="w-20 h-20 mx-auto bg-brand-panel text-brand-accent rounded-none border border-brand-border flex items-center justify-center text-3xl mb-6 shadow-sm transform -rotate-3">
+                        <i class="fas fa-tshirt transform rotate-3"></i>
+                    </div>
+                    <h3 class="font-heading font-black text-xl mb-3 text-white uppercase tracking-wide">STYLE HYPEBEAST</h3>
+                    <p class="text-brand-muted leading-relaxed">Kurasi desain modern yang bikin look lu auto-kelihatan mahal dan standout di tongkrongan.</p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="text-center px-4">
+                    <div class="w-20 h-20 mx-auto bg-brand-panel text-brand-accent rounded-none border border-brand-border flex items-center justify-center text-3xl mb-6 shadow-sm transform rotate-3">
+                        <i class="fas fa-tags transform -rotate-3"></i>
+                    </div>
+                    <h3 class="font-heading font-black text-xl mb-3 text-white uppercase tracking-wide">HEMAT MAMPUS</h3>
+                    <p class="text-brand-muted leading-relaxed">Beli satuan bisa jebol 200rb lebih. Bundle ini di-set buat lu yang mau gaya tapi dompet tetep aman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PRICE & URGENCY SECTION (The Drop Terminal) -->
+    <section class="py-24 px-4 bg-brand-dark relative" id="order-section">
+        <div class="max-w-4xl mx-auto relative z-10 animate-on-scroll">
+            
+            <div class="bg-brand-panel rounded-2xl p-8 md:p-14 border border-brand-border shadow-[0_0_50px_rgba(0,0,0,0.8)] relative overflow-hidden">
+                
+                <!-- Terminal decorative header -->
+                <div class="absolute top-0 left-0 w-full bg-black border-b border-brand-border px-4 py-2 flex items-center space-x-2">
+                    <div class="w-3 h-3 rounded-full bg-brand-alert"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-brand-action"></div>
+                    <span class="ml-4 text-[10px] text-brand-muted font-mono uppercase tracking-widest">Secure_Checkout.exe</span>
+                </div>
+
+                <div class="text-center mb-10 mt-8 relative z-10">
+                    <h2 class="font-heading text-3xl md:text-5xl font-black text-white mb-2 uppercase tracking-tighter">FINAL BUNDLE PRICE</h2>
+                    
+                    <div class="flex justify-center items-center gap-4 text-brand-muted font-mono mb-4">
+                        <span>RETAIL:</span>
+                        <span class="line-through text-lg">Rp 200.000</span>
+                    </div>
+                    
+                    <!-- Huge Neon Price -->
+                    <div class="flex justify-center items-start mt-2 mb-8">
+                        <span class="text-2xl font-bold text-white mt-2 mr-2">Rp</span>
+                        <span class="font-heading text-6xl md:text-8xl font-black text-brand-accent tracking-tighter drop-shadow-[0_0_20px_rgba(204,255,0,0.3)]">150.000</span>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="inline-flex items-center text-xs font-mono font-bold text-black bg-brand-accent px-4 py-1.5 uppercase tracking-widest">
+                            <i class="fas fa-check mr-2"></i> FREE ONGKIR
+                        </span>
+                        <span class="inline-flex items-center text-xs font-mono font-bold text-white border border-brand-border px-4 py-1.5 uppercase tracking-widest">
+                            <i class="fas fa-check text-brand-accent mr-2"></i> BISA COD
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Urgency Box (Danger vibe) -->
+                <div class="bg-black p-6 mb-10 border-l-4 border-brand-alert relative z-10">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-left w-full">
+                            <p class="text-brand-alert font-mono font-bold text-sm mb-3 flex items-center uppercase tracking-widest">
+                                <i class="fas fa-exclamation-triangle mr-2 animate-pulse"></i> LOW STOCK WARNING
+                            </p>
+                            <!-- Progress Bar -->
+                            <div class="w-full bg-brand-panel h-2 mb-2 overflow-hidden border border-brand-border">
+                                <div class="bg-brand-alert h-full w-[85%] relative">
+                                    <div class="absolute inset-0 bg-white/20" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 10px);"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm font-mono text-brand-muted">STOCK LEFT: <span class="font-bold text-white text-lg">17</span></p>
+                        </div>
+                        
+                        <!-- Terminal Countdown -->
+                        <div class="text-center w-full md:w-auto shrink-0">
+                            <p class="text-[10px] font-mono font-bold text-brand-muted mb-2 uppercase tracking-widest">Time Remaining</p>
+                            <div class="flex justify-center items-center gap-2 font-mono font-bold text-xl text-white" id="countdown-timer">
+                                <div class="bg-brand-panel border border-brand-border px-3 py-2">
+                                    <span id="hours">01</span>
+                                </div>
+                                <span class="text-brand-muted animate-pulse">:</span>
+                                <div class="bg-brand-panel border border-brand-border px-3 py-2">
+                                    <span id="minutes">59</span>
+                                </div>
+                                <span class="text-brand-muted animate-pulse">:</span>
+                                <div class="bg-brand-panel border border-brand-alert text-brand-alert px-3 py-2">
+                                    <span id="seconds">30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative z-10">
+                    <a href="https://wa.me/628990765544?text=Halo%20Admin%20Glomed%2C%20saya%20mau%20pesan%20Promo%20Bundling%20150RB.%20Masih%20ada%20stok%3F" target="_blank" class="neon-btn block w-full bg-brand-accent text-black font-heading font-black text-2xl py-6 text-center uppercase tracking-widest border-2 border-transparent hover:bg-white hover:border-white">
+                        <i class="fab fa-whatsapp text-3xl mr-3 align-middle"></i> CHECKOUT SEKARANG
+                    </a>
+                    <p class="mt-5 text-xs font-mono text-brand-muted text-center uppercase tracking-widest">
+                        <i class="fas fa-shield-alt text-brand-action mr-1"></i> TRANSAKSI AMAN VIA WHATSAPP.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TESTIMONI (Dark Grid) -->
+    <section class="py-24 px-4 bg-black max-w-7xl mx-auto border-t border-brand-border">
+        <div class="text-center mb-16 animate-on-scroll">
+            <h2 class="font-heading text-4xl md:text-5xl font-black mb-4 text-white tracking-tighter uppercase">
+                BUYER REVIEWS
+            </h2>
+            <p class="text-brand-muted font-mono text-sm uppercase tracking-widest">Real drops, real buyers.</p>
+        </div>
+
+        <!-- Grid Items: 4 Kolom -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <!-- Foto 1 -->
+            <div class="bg-brand-panel p-2 border border-brand-border hover:border-brand-accent transition duration-300 animate-on-scroll grayscale hover:grayscale-0">
+                <div class="w-full bg-brand-dark overflow-hidden relative">
+                    <img src="images/ulasan-1.jpeg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="Ulasan Pelanggan" class="w-full h-auto object-cover aspect-[4/5] opacity-80 hover:opacity-100 transition">
+                    <div class="min-h-[250px] w-full flex-col items-center justify-center text-center px-4 text-brand-muted text-sm font-mono border border-dashed border-brand-border m-2" style="display: none; width: calc(100% - 16px);">
+                        <i class="far fa-image text-3xl mb-2"></i><br>IMG_REV_01
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="bg-brand-panel p-2 border border-brand-border hover:border-brand-accent transition duration-300 animate-on-scroll grayscale hover:grayscale-0" style="animation-delay: 100ms;">
+                <div class="w-full bg-brand-dark overflow-hidden relative">
+                    <img src="images/ulasan-2.jpeg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="Ulasan Pelanggan" class="w-full h-auto object-cover aspect-[4/5] opacity-80 hover:opacity-100 transition">
+                    <div class="min-h-[250px] w-full flex-col items-center justify-center text-center px-4 text-brand-muted text-sm font-mono border border-dashed border-brand-border m-2" style="display: none; width: calc(100% - 16px);">
+                        <i class="far fa-image text-3xl mb-2"></i><br>IMG_REV_02
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="bg-brand-panel p-2 border border-brand-border hover:border-brand-accent transition duration-300 animate-on-scroll grayscale hover:grayscale-0" style="animation-delay: 200ms;">
+                <div class="w-full bg-brand-dark overflow-hidden relative">
+                    <img src="images/ulasan-3.jpeg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="Ulasan Pelanggan" class="w-full h-auto object-cover aspect-[4/5] opacity-80 hover:opacity-100 transition">
+                    <div class="min-h-[250px] w-full flex-col items-center justify-center text-center px-4 text-brand-muted text-sm font-mono border border-dashed border-brand-border m-2" style="display: none; width: calc(100% - 16px);">
+                        <i class="far fa-image text-3xl mb-2"></i><br>IMG_REV_03
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foto 4 -->
+            <div class="bg-brand-panel p-2 border border-brand-border hover:border-brand-accent transition duration-300 animate-on-scroll grayscale hover:grayscale-0" style="animation-delay: 300ms;">
+                <div class="w-full bg-brand-dark overflow-hidden relative">
+                    <img src="images/ulasan-4.jpeg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="Ulasan Pelanggan" class="w-full h-auto object-cover aspect-[4/5] opacity-80 hover:opacity-100 transition">
+                    <div class="min-h-[250px] w-full flex-col items-center justify-center text-center px-4 text-brand-muted text-sm font-mono border border-dashed border-brand-border m-2" style="display: none; width: calc(100% - 16px);">
+                        <i class="far fa-image text-3xl mb-2"></i><br>IMG_REV_04
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FOOTER & FINAL CTA (Minimalist Dark) -->
+    <footer class="bg-brand-dark border-t border-brand-border text-center pt-20 pb-12 px-4">
+        <div class="max-w-3xl mx-auto animate-on-scroll">
+            <h2 class="font-heading text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter">
+                DON'T SLEEP ON THIS.
+            </h2>
+            <p class="text-brand-muted font-mono text-sm mb-10 leading-relaxed max-w-lg mx-auto uppercase tracking-wider">
+                Penawaran ini bisa ditarik kapan saja. Amankan paket lu sebelum kehabisan stok atau harga balik normal.
+            </p>
+            
+            <a href="https://wa.me/628990765544?text=Halo%20Admin%20Glomed%2C%20saya%20mau%20pesan%20Promo%20Bundling%20150RB" target="_blank" class="inline-flex items-center justify-center text-brand-accent font-bold font-mono uppercase tracking-widest hover:text-white transition border-b border-brand-accent hover:border-white pb-1">
+                ORDER VIA WHATSAPP <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+            
+            <div class="mt-16 mb-8 flex justify-center items-center space-x-8 text-brand-muted">
+                <a href="#" class="hover:text-brand-accent transition text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-brand-accent transition text-2xl"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="hover:text-brand-accent transition text-2xl"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p class="text-xs font-mono text-brand-border tracking-widest">© 2026 GLOMED & CO. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts for Logic & Animations -->
+    <script>
+        // 1. Fake Viewer Counter
+        const viewerEl = document.getElementById('live-viewers');
+        let currentViewers = 33;
+        setInterval(() => {
+            const change = Math.floor(Math.random() * 5) - 2; 
+            currentViewers += change;
+            if (currentViewers < 15) currentViewers = 15 + Math.floor(Math.random() * 5); 
+            if (currentViewers > 55) currentViewers = 55 - Math.floor(Math.random() * 5); 
+            
+            viewerEl.style.opacity = 0;
+            setTimeout(() => {
+                viewerEl.innerText = currentViewers;
+                viewerEl.style.opacity = 1;
+            }, 200);
+        }, 4000);
+
+        // 2. Fake Order Notification
+        const names = ["Denny", "Sabrina", "Andi", "Bima", "Rizky", "Siti", "Ayu", "Dimas", "Budi", "Reza", "Putri", "Bayu"];
+        const cities = ["Jakarta", "Bandung", "Surabaya", "Medan", "Bali", "Semarang", "Makassar", "Yogyakarta"];
+        
+        const notifEl = document.getElementById('fake-notification');
+        const notifNameEl = document.getElementById('notify-name');
+        const notifCityEl = document.getElementById('notify-city');
+        
+        const showNotification = () => {
+            const name = names[Math.floor(Math.random() * names.length)];
+            const city = cities[Math.floor(Math.random() * cities.length)];
+            
+            notifNameEl.innerText = name;
+            notifCityEl.innerText = city;
+            
+            notifEl.classList.remove('translate-y-32', 'opacity-0');
+            notifEl.classList.add('translate-y-0', 'opacity-100');
+            
+            setTimeout(() => {
+                notifEl.classList.remove('translate-y-0', 'opacity-100');
+                notifEl.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+        };
+
+        setTimeout(() => {
+            showNotification();
+            setInterval(() => {
+                showNotification();
+            }, 8000 + Math.random() * 5000);
+        }, 3000);
+
+        // 3. Countdown Timer
+        let timerSeconds = (1 * 3600) + (59 * 60) + 30; 
+        const hoursEl = document.getElementById('hours');
+        const minsEl = document.getElementById('minutes');
+        const secsEl = document.getElementById('seconds');
+
+        const updateTimer = () => {
+            let h = Math.floor(timerSeconds / 3600);
+            let m = Math.floor((timerSeconds % 3600) / 60);
+            let s = timerSeconds % 60;
+            
+            hoursEl.innerText = h < 10 ? '0' + h : h;
+            minsEl.innerText = m < 10 ? '0' + m : m;
+            secsEl.innerText = s < 10 ? '0' + s : s;
+            
+            if (timerSeconds > 0) {
+                timerSeconds--;
+            } else {
+                timerSeconds = (1 * 3600) + (59 * 60) + 30; 
+            }
+        };
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+
+        // 4. Smooth Intersection Observer
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+            document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>yt
