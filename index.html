@@ -135,6 +135,9 @@
         /* Marquee Animation */
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .animate-marquee { display: inline-block; white-space: nowrap; animation: marquee 20s linear infinite; }
+        
+        @keyframes marquee-fast { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee-fast { display: inline-block; white-space: nowrap; animation: marquee-fast 15s linear infinite; }
 
         /* Desain Struk Belanja Dark Mode */
         .struk-box { background: #111; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
@@ -261,10 +264,10 @@
             <div class="max-w-6xl mx-auto animate-on-scroll">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="font-heading text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter text-white">
-                        SERAHKAN KE Glomed&co<br>
+                        SERAHKAN KE GLOBAL MEDIA<br>
                         <span class="text-brand-accent">PABRIK RAHASIA DI BALIK BRAND LU.</span>
                     </h2>
-                    <p class="text-brand-muted max-w-2xl mx-auto text-sm md:text-base">Lu cuma fokus marketing. Urusan konveksi kaos custom 100% tim kami yang beresin.</p>
+                    <p class="text-brand-muted max-w-2xl mx-auto text-sm md:text-base">Lu cuma fokus marketing dan bangun komunitas. Urusan produksi kotor 100% tim kami yang beresin.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -392,7 +395,7 @@
 
                     <figure class="relative group overflow-hidden bg-brand-bg border border-brand-border p-2">
                         <div class="overflow-hidden aspect-[4/3] bg-zinc-900">
-                            <img src="jahit_rantai.jpeg" alt="Kerapian Jahitan Rantai Baju" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+                            <img src="jahit_rantai.jpg" alt="Kerapian Jahitan Rantai Baju" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
                         </div>
                         <figcaption class="absolute bottom-4 left-4 bg-black/90 backdrop-blur border border-brand-border text-[10px] md:text-xs font-mono font-bold text-brand-accent px-3 py-1.5 uppercase tracking-widest">03 / Jahit Rantai Presisi</figcaption>
                     </figure>
@@ -514,6 +517,49 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="py-12 border-b border-brand-border bg-black overflow-hidden relative">
+            <div class="absolute left-0 top-0 w-16 md:w-32 h-full bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 w-16 md:w-32 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="flex w-fit animate-marquee-fast whitespace-nowrap opacity-50 hover:opacity-100 transition-opacity duration-500 items-center">
+                
+                <!-- LOGO SET -->
+                <div class="flex items-center gap-12 md:gap-24 px-6 md:px-12">
+                    <img src="bank_lampung.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="bni.jpg.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="bnn.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="bpjs.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="bukit_Asam.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="bumn.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="honda.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="kai.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="mm.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="otsky.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="pln.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="smartfren.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="unila.jpg" class="h-10 md:h-14 object-contain" />
+                </div>
+
+                <!-- DUPLICATE -->
+                <div class="flex items-center gap-12 md:gap-24 px-6 md:px-12">
+                    <img src="bank_lampung.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="bni.jpg.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="bnn.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="bpjs.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="bukit_Asam.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="bumn.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="honda.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="kai.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="mm.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="otsky.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="pln.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="smartfren.jpg" class="h-10 md:h-14 object-contain" />
+                    <img src="unila.jpg" class="h-10 md:h-14 object-contain" />
+                </div>
+
             </div>
         </section>
 
