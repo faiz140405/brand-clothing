@@ -3,18 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pabrik Rahasia Brand Clothing Anda | Paket Usaha Konveksi</title>
-    
-    <!-- SEO & Accessibility Optimization -->
-    <meta name="description" content="Wujudkan mimpi punya brand clothing sendiri. Modal mulai 700-Ribuan, 100% terima beres! Pabrik rahasia konveksi kualitas distro, gratis desain & aksesoris.">
-    <meta name="keywords" content="paket usaha clothing, vendor konveksi, bikin brand baju, jasa sablon kaos, pabrik kaos distro, konveksi B2B">
+    <!-- Optimasi Meta Title & Description dengan Keyword Target -->
+    <title>Konveksi Kaos Custom & Sablon Kaos Premium | Glomed&co</title>
+    <meta name="description" content="Pabrik rahasia konveksi kaos custom, sablon kaos premium, & custom t-shirt Indonesia. Wujudkan brand clothing streetwear cuma modal 1 lusin (12 pcs). 100% terima beres!">
+    <meta name="keywords" content="konveksi kaos custom, sablon kaos, custom t-shirt Indonesia, pabrik kaos distro, vendor streetwear, buat brand clothing, paket usaha clothing, makloon kaos">
     <meta name="author" content="Glomed&co">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Pabrik Rahasia Brand Clothing Anda">
-    <meta property="og:description" content="Mulai brand clothing cuma modal 1 lusin. 100% terima beres, kualitas distro.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
+    <!-- Open Graph untuk Social Media Share -->
+    <meta property="og:title" content="Pabrik Rahasia Brand Clothing Anda | Glomed&co">
+    <meta property="og:description" content="Mulai brand clothing custom t-shirt Indonesia cuma modal 1 lusin. 100% terima beres, kualitas distro.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Preconnect untuk kecepatan render font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;700;800;900&display=swap"></noscript>
+    
+    <!-- SCHEMA MARKUP (Local Business & Product/Offer) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "Glomed&co Factory",
+          "image": "kaos sablon.jpg",
+          "@id": "https://brand-clothing-three.vercel.app/",
+          "url": "https://brand-clothing-three.vercel.app/",
+          "telephone": "+6281234567890",
+          "priceRange": "Rp 720.000 - Rp 10.000.000",
+          "description": "Pabrik konveksi kaos custom dan vendor sablon kaos plastisol premium untuk custom t-shirt Indonesia.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Indonesia",
+            "addressCountry": "ID"
+          }
+        },
+        {
+          "@type": "Product",
+          "name": "Paket Usaha Brand Clothing B2B (1 Lusin)",
+          "image": "kaos sablon.jpg",
+          "description": "Paket pembuatan brand custom t-shirt Indonesia, sablon kaos premium, include desain dan aksesoris.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Glomed&co"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://brand-clothing-three.vercel.app/",
+            "priceCurrency": "IDR",
+            "price": "720000",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "Glomed&co Factory"
+            }
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Meta Pixel Code -->
-    <script>
+    <script defer>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -23,17 +78,15 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'YOUR_PIXEL_ID'); // GANTI DENGAN PIXEL ID ANDA
+        fbq('init', 'YOUR_PIXEL_ID'); 
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" alt="Meta Pixel"/></noscript>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome (Deferred for performance) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <script>
         tailwind.config = {
@@ -60,18 +113,16 @@
         }
     </script>
     <style>
+        /* Performance Optimization: Content Visibility for offscreen items */
+        .cv-auto { content-visibility: auto; contain-intrinsic-size: 1000px; }
+
         /* Fade Up Animations */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-on-scroll {
-            opacity: 0;
-            animation: none;
-        }
-        .animate-on-scroll.is-visible {
-            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
+        .animate-on-scroll { opacity: 0; animation: none; }
+        .animate-on-scroll.is-visible { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
         /* WA Button Pulse Effect */
         @keyframes pulse-wa {
@@ -79,31 +130,17 @@
             70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
-        .btn-wa-pulse {
-            animation: pulse-wa 2s infinite;
-        }
+        .btn-wa-pulse { animation: pulse-wa 2s infinite; }
 
         /* Marquee Animation */
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            display: inline-block;
-            white-space: nowrap;
-            animation: marquee 20s linear infinite;
-        }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { display: inline-block; white-space: nowrap; animation: marquee 20s linear infinite; }
 
         /* Desain Struk Belanja Dark Mode */
-        .struk-box {
-            background: #111;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
+        .struk-box { background: #111; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .struk-box::before {
             content: ""; position: absolute; top: -10px; left: 0; right: 0; height: 10px;
-            background-size: 20px 20px;
-            background-image: radial-gradient(circle at 10px 0, transparent 10px, #111 11px);
+            background-size: 20px 20px; background-image: radial-gradient(circle at 10px 0, transparent 10px, #111 11px);
         }
 
         /* Custom Scrollbar for Dark Mode */
@@ -113,10 +150,7 @@
         ::-webkit-scrollbar-thumb:hover { background: #ccff00; }
         
         /* Focus styles for Accessibility */
-        a:focus, button:focus {
-            outline: 2px solid var(--tw-colors-brand-accent);
-            outline-offset: 2px;
-        }
+        a:focus, button:focus { outline: 2px solid var(--tw-colors-brand-accent); outline-offset: 2px; }
     </style>
 </head>
 <body class="bg-brand-bg text-brand-text font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-black">
@@ -132,11 +166,9 @@
 
         <!-- 1. HERO SECTION & CTA ATAS -->
         <header class="relative pt-12 pb-24 px-4 md:px-8 border-b border-brand-border overflow-hidden">
-            <!-- Abstract Dark Grid Background -->
             <div class="absolute inset-0 z-0 opacity-10" style="background-image: linear-gradient(#262626 1px, transparent 1px), linear-gradient(90deg, #262626 1px, transparent 1px); background-size: 40px 40px;"></div>
             
             <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 relative z-10">
-                <!-- Teks -->
                 <div class="w-full lg:w-1/2 text-center lg:text-left pt-10">
                     <div class="inline-flex items-center bg-brand-panel border border-brand-border text-brand-accent font-mono text-xs md:text-sm px-4 py-2 mb-6 uppercase tracking-widest shadow-[0_0_15px_rgba(204,255,0,0.1)]">
                         <span class="w-2 h-2 rounded-full bg-brand-danger animate-pulse mr-3"></span> 🔥 OPEN BATCH PRODUKSI BULAN INI
@@ -147,23 +179,22 @@
                     <p class="text-lg md:text-2xl font-bold text-white mb-4 tracking-wide bg-brand-panel inline-block px-4 py-2 border-l-4 border-brand-accent">
                         Modal Mulai 700-Ribuan, 100% Terima Beres!
                     </p>
-                    <p class="text-brand-muted text-sm md:text-lg mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                        Gak perlu modal puluhan juta atau pusing mikirin vendor. Mulai dari desain, bahan premium, sampai hangtag, semua kami yang urus. <strong>Minimal order cuma 1 Lusin (12 Pcs)!</strong>
-                    </p>
+                    <h2 class="text-brand-muted text-sm md:text-lg mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0 font-normal">
+                        Konveksi kaos custom Indonesia. Gak perlu modal puluhan juta atau pusing mikirin vendor sablon kaos. Mulai dari desain, bahan premium, sampai hangtag, semua kami yang urus. <strong>Minimal order cuma 1 Lusin (12 Pcs)!</strong>
+                    </h2>
                     
-                    <!-- CTA ATAS -->
                     <button onclick="sendToWhatsApp(event)" aria-label="Konsultasi via WhatsApp" class="group relative inline-flex items-center justify-center font-heading font-black text-base md:text-xl px-6 md:px-8 py-4 md:py-5 w-full sm:w-auto uppercase tracking-wide transition-all duration-300">
                         <div class="absolute inset-0 bg-brand-wa opacity-20 blur-xl group-hover:opacity-50 transition duration-300"></div>
                         <div class="relative w-full h-full bg-brand-wa text-white flex items-center justify-center px-8 py-4 border-2 border-transparent group-hover:bg-white group-hover:text-black transition duration-300 shadow-[4px_4px_0px_rgba(37,211,102,0.4)] group-hover:shadow-[4px_4px_0px_rgba(255,255,255,1)]">
-                            <i class="fab fa-whatsapp text-2xl mr-3"></i> TANYA ADMIN SEKARANG
+                            <i class="fab fa-whatsapp text-2xl mr-3" aria-hidden="true"></i> TANYA ADMIN SEKARANG
                         </div>
                     </button>
                 </div>
                 
-                <!-- Visual -->
                 <div class="w-full lg:w-1/2 relative mt-10 lg:mt-0">
                     <div class="relative p-2 bg-brand-panel border border-brand-border transform lg:rotate-2 hover:rotate-0 transition duration-500">
-                        <img src="kaos sablon.jpg" alt="Tumpukan Kaos Premium Lipat Rapi" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition duration-700" fetchpriority="high">
+                        <!-- Performa: Hero image tanpa lazy loading, gunakan fetchpriority high -->
+                        <img src="kaos sablon.jpg" alt="Hasil sablon kaos custom t-shirt Indonesia premium" width="600" height="800" class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition duration-700" fetchpriority="high" decoding="sync">
                         <div class="absolute top-4 left-4 bg-black text-brand-accent font-mono text-[10px] px-2 py-1 border border-brand-accent">PRODUCTION_READY</div>
                         <div class="absolute bottom-4 right-4 bg-black text-white font-mono text-[10px] px-2 py-1 border border-brand-border"><i class="fas fa-expand"></i> HD</div>
                     </div>
@@ -172,7 +203,7 @@
         </header>
 
         <!-- 2. SECTION MASALAH -->
-        <section class="py-20 md:py-24 px-4 bg-brand-bg relative border-b border-brand-border">
+        <section class="py-20 md:py-24 px-4 bg-brand-bg relative border-b border-brand-border cv-auto">
             <div class="max-w-5xl mx-auto animate-on-scroll">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="font-heading text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter text-white">
@@ -182,58 +213,58 @@
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-4 md:gap-6">
-                    <div class="bg-brand-panel p-5 md:p-6 border border-brand-border hover:border-brand-danger transition duration-300 group flex items-start gap-4 md:gap-5">
-                        <div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-black border border-brand-danger flex items-center justify-center text-brand-danger text-lg md:text-xl group-hover:bg-brand-danger group-hover:text-white transition">
+                    <article class="bg-brand-panel p-5 md:p-6 border border-brand-border hover:border-brand-danger transition duration-300 group flex items-start gap-4 md:gap-5">
+                        <div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-black border border-brand-danger flex items-center justify-center text-brand-danger text-lg md:text-xl group-hover:bg-brand-danger group-hover:text-white transition" aria-hidden="true">
                             <i class="fas fa-times"></i>
                         </div>
                         <div>
                             <h3 class="font-heading font-bold text-base md:text-lg text-white mb-2 uppercase tracking-wide">Modal Pas-pasan</h3>
-                            <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Vendor lain minta minimal order 50-100 pcs. Resiko tinggi numpuk stok kalau desain nggak laku.</p>
+                            <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Vendor sablon kaos lain minta minimal order 50-100 pcs. Resiko tinggi numpuk stok kalau desain nggak laku.</p>
                         </div>
-                    </div>
+                    </article>
                     
-                    <div class="bg-brand-panel p-5 md:p-6 border border-brand-border hover:border-brand-danger transition duration-300 group flex items-start gap-4 md:gap-5">
-                        <div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-black border border-brand-danger flex items-center justify-center text-brand-danger text-lg md:text-xl group-hover:bg-brand-danger group-hover:text-white transition">
+                    <article class="bg-brand-panel p-5 md:p-6 border border-brand-border hover:border-brand-danger transition duration-300 group flex items-start gap-4 md:gap-5">
+                        <div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-black border border-brand-danger flex items-center justify-center text-brand-danger text-lg md:text-xl group-hover:bg-brand-danger group-hover:text-white transition" aria-hidden="true">
                             <i class="fas fa-times"></i>
                         </div>
                         <div>
                             <h3 class="font-heading font-bold text-base md:text-lg text-white mb-2 uppercase tracking-wide">Gak Bisa Desain</h3>
-                            <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Gak punya tim kreatif atau bingung mau merealisasikan konsep abstrak ke dalam gambar jadi.</p>
+                            <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Gak punya tim kreatif atau bingung merealisasikan konsep abstrak ke dalam gambar jadi custom t-shirt.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="bg-brand-panel p-5 md:p-6 border border-brand-border hover:border-brand-danger transition duration-300 group flex items-start gap-4 md:gap-5">
-                        <div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-black border border-brand-danger flex items-center justify-center text-brand-danger text-lg md:text-xl group-hover:bg-brand-danger group-hover:text-white transition">
+                    <article class="bg-brand-panel p-5 md:p-6 border border-brand-border hover:border-brand-danger transition duration-300 group flex items-start gap-4 md:gap-5">
+                        <div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-black border border-brand-danger flex items-center justify-center text-brand-danger text-lg md:text-xl group-hover:bg-brand-danger group-hover:text-white transition" aria-hidden="true">
                             <i class="fas fa-times"></i>
                         </div>
                         <div>
                             <h3 class="font-heading font-bold text-base md:text-lg text-white mb-2 uppercase tracking-wide">Buta Material</h3>
-                            <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Gak ngerti bedanya Combed 30s sama 24s. Bingung pilih jenis sablon Plastisol atau Rubber.</p>
+                            <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Gak ngerti bedanya kain konveksi Combed 30s sama 24s. Bingung pilih sablon plastisol atau rubber.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="bg-brand-panel p-5 md:p-6 border border-brand-border hover:border-brand-danger transition duration-300 group flex items-start gap-4 md:gap-5">
-                        <div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-black border border-brand-danger flex items-center justify-center text-brand-danger text-lg md:text-xl group-hover:bg-brand-danger group-hover:text-white transition">
+                    <article class="bg-brand-panel p-5 md:p-6 border border-brand-border hover:border-brand-danger transition duration-300 group flex items-start gap-4 md:gap-5">
+                        <div class="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-black border border-brand-danger flex items-center justify-center text-brand-danger text-lg md:text-xl group-hover:bg-brand-danger group-hover:text-white transition" aria-hidden="true">
                             <i class="fas fa-times"></i>
                         </div>
                         <div>
                             <h3 class="font-heading font-bold text-base md:text-lg text-white mb-2 uppercase tracking-wide">Takut Ditipu Vendor</h3>
-                            <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Udah bayar mahal ketemu vendor abal-abal yang jahitannya miring dan sablon gampang retak.</p>
+                            <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Udah bayar mahal ketemu konveksi kaos abal-abal yang jahitannya miring dan sablon gampang retak.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- 3. SECTION SOLUSI & OFFER -->
-        <section class="py-20 md:py-24 px-4 bg-brand-panel border-b border-brand-border">
+        <section class="py-20 md:py-24 px-4 bg-brand-panel border-b border-brand-border cv-auto">
             <div class="max-w-6xl mx-auto animate-on-scroll">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="font-heading text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter text-white">
-                        SERAHKAN KE GLOBAL MEDIA<br>
+                        SERAHKAN KE Glomed&co<br>
                         <span class="text-brand-accent">PABRIK RAHASIA DI BALIK BRAND LU.</span>
                     </h2>
-                    <p class="text-brand-muted max-w-2xl mx-auto text-sm md:text-base">Lu cuma fokus marketing dan bangun komunitas. Urusan produksi kotor 100% tim kami yang beresin.</p>
+                    <p class="text-brand-muted max-w-2xl mx-auto text-sm md:text-base">Lu cuma fokus marketing. Urusan konveksi kaos custom 100% tim kami yang beresin.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -242,7 +273,7 @@
                         <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide flex items-center gap-3">
                             <i class="fas fa-check text-brand-accent text-sm"></i> Min. Order Rendah
                         </h3>
-                        <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Mulai dari 12 Pcs saja! Sangat cocok untuk test pasar (Drop System) tanpa resiko bakar uang.</p>
+                        <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Mulai dari 12 Pcs saja! Sangat cocok untuk test pasar (Drop System) tanpa resiko bakar uang di pabrik kaos.</p>
                     </article>
                     
                     <article class="bg-brand-bg p-6 md:p-8 border border-brand-border hover:border-brand-accent transition duration-300">
@@ -250,7 +281,7 @@
                         <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide flex items-center gap-3">
                             <i class="fas fa-check text-brand-accent text-sm"></i> Harga Pabrik
                         </h3>
-                        <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Mulai Rp 60.000/pcs dengan spesifikasi butik/distro. Makin banyak kuantiti order, makin miring harganya.</p>
+                        <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Mulai Rp 60.000/pcs dengan spesifikasi custom t-shirt distro. Makin banyak kuantiti order, makin miring harganya.</p>
                     </article>
 
                     <article class="bg-brand-bg p-6 md:p-8 border border-brand-border hover:border-brand-accent transition duration-300">
@@ -258,7 +289,7 @@
                         <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide flex items-center gap-3">
                             <i class="fas fa-check text-brand-accent text-sm"></i> Free Desain
                         </h3>
-                        <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Tinggal sebut konsep atau kasih referensi Pinterest, tim desainer streetwear profesional kami yang gambar.</p>
+                        <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Tinggal sebut konsep streetwear, tim desainer sablon kaos profesional kami yang gambar gratis.</p>
                     </article>
 
                     <article class="bg-brand-bg p-6 md:p-8 border border-brand-border hover:border-brand-accent transition duration-300">
@@ -266,7 +297,7 @@
                         <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide flex items-center gap-3">
                             <i class="fas fa-check text-brand-accent text-sm"></i> Free Aksesoris
                         </h3>
-                        <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Sudah termasuk Hangtag & Woven Label custom nama brand Anda. Baju siap jual tanpa kelihatan kosongan.</p>
+                        <p class="text-xs md:text-sm text-brand-muted leading-relaxed">Sudah termasuk Hangtag & Woven Label custom nama brand Anda. Baju siap jual layaknya distro.</p>
                     </article>
 
                     <article class="bg-brand-bg p-6 md:p-8 border border-brand-border hover:border-brand-accent transition duration-300 md:col-span-2 lg:col-span-2 flex flex-col justify-center">
@@ -274,36 +305,34 @@
                         <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide flex items-center gap-3">
                             <i class="fas fa-check text-brand-accent text-sm"></i> Jaminan Kualitas 100%
                         </h3>
-                        <p class="text-xs md:text-sm text-brand-muted leading-relaxed max-w-xl">Pengalaman lebih dari 10 tahun menangani brand lokal dengan standar jahitan distro ekspor. Ada cacat produksi? Jahitan lepas? Sablon luntur? Kami ganti baru tanpa banyak alasan!</p>
+                        <p class="text-xs md:text-sm text-brand-muted leading-relaxed max-w-xl">Pengalaman konveksi lebih dari 10 tahun menangani custom t-shirt Indonesia dengan standar jahitan distro ekspor. Ada cacat produksi? Sablon luntur? Kami ganti baru tanpa banyak alasan!</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- CTA TENGAH (NEW) -->
-        <section class="py-16 md:py-20 px-4 bg-brand-accent text-black text-center border-b border-brand-border relative overflow-hidden">
+        <!-- CTA TENGAH -->
+        <section class="py-16 md:py-20 px-4 bg-brand-accent text-black text-center border-b border-brand-border relative overflow-hidden cv-auto">
             <div class="max-w-4xl mx-auto relative z-10 animate-on-scroll">
                 <h2 class="font-heading text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter leading-tight">Jangan Tunggu Ide Lu<br>Dieksekusi Kompetitor.</h2>
-                <p class="font-mono text-sm md:text-base font-bold mb-8 uppercase tracking-widest opacity-80">Amankan antrean produksi lu bulan ini sebelum penuh.</p>
+                <p class="font-mono text-sm md:text-base font-bold mb-8 uppercase tracking-widest opacity-80">Amankan antrean konveksi sablon lu bulan ini sebelum penuh.</p>
                 <button onclick="sendToWhatsApp(event)" aria-label="Amankan Slot Produksi via WhatsApp" class="inline-flex items-center justify-center bg-black text-white px-8 py-5 font-heading font-black text-lg md:text-xl hover:bg-zinc-800 transition shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:shadow-[4px_4px_0px_rgba(0,0,0,0.5)] uppercase tracking-wide group">
-                    <i class="fab fa-whatsapp text-brand-wa text-3xl mr-3 group-hover:scale-110 transition"></i> AMANKAN SLOT SEKARANG
+                    <i class="fab fa-whatsapp text-brand-wa text-3xl mr-3 group-hover:scale-110 transition" aria-hidden="true"></i> AMANKAN SLOT SEKARANG
                 </button>
             </div>
-            <!-- Striped Background Pattern -->
             <div class="absolute inset-0 opacity-10 pointer-events-none" style="background: repeating-linear-gradient(-45deg, #000, #000 10px, transparent 10px, transparent 20px);"></div>
         </section>
 
         <!-- 4. SECTION SIMULASI KEUNTUNGAN -->
-        <section class="py-20 md:py-24 px-4 bg-brand-bg relative border-b border-brand-border">
+        <section class="py-20 md:py-24 px-4 bg-brand-bg relative border-b border-brand-border cv-auto">
             <div class="max-w-4xl mx-auto animate-on-scroll relative z-10">
                 <div class="text-center mb-10 md:mb-12">
                     <h2 class="font-heading text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">
                         SIMULASI BALIK MODAL
                     </h2>
-                    <p class="text-brand-muted mt-3 md:mt-4 font-mono text-xs md:text-sm uppercase tracking-widest">Kalkulasi ROI (Return of Investment)</p>
+                    <p class="text-brand-muted mt-3 md:mt-4 font-mono text-xs md:text-sm uppercase tracking-widest">Kalkulasi ROI Bisnis T-Shirt Custom</p>
                 </div>
                 
-                <!-- Struk Belanja Terminal Dark Mode -->
                 <div class="struk-box p-6 md:p-12 mx-auto max-w-xl border border-brand-border">
                     <div class="text-center mb-6 md:mb-8 border-b border-dashed border-brand-border pb-4 md:pb-6">
                         <h3 class="font-mono font-bold text-xl md:text-2xl text-white tracking-widest uppercase">PAKET 1 LUSIN</h3>
@@ -312,7 +341,7 @@
                     
                     <div class="space-y-4 md:space-y-6 font-mono text-xs md:text-base text-gray-400">
                         <div class="flex justify-between items-end border-b border-zinc-800 pb-2 hover:text-white transition">
-                            <span>Modal Produksi (Rp 60K x 12)</span>
+                            <span>Modal Konveksi (Rp 60K x 12)</span>
                             <span class="font-bold">Rp 720.000</span>
                         </div>
                         <div class="flex justify-between items-end border-b border-zinc-800 pb-2 hover:text-white transition">
@@ -329,134 +358,119 @@
                     </div>
                     
                     <div class="mt-6 md:mt-8 text-center bg-black border border-brand-accent/50 text-brand-accent p-2 md:p-3 font-bold uppercase tracking-widest text-[10px] md:text-xs animate-pulse">
-                        <i class="fas fa-bolt mr-2"></i> MARGIN LEBIH DARI 100%!
+                        <i class="fas fa-bolt mr-2" aria-hidden="true"></i> MARGIN LEBIH DARI 100%!
                     </div>
                 </div>
             </div>
-            <!-- Background element -->
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl bg-brand-accent/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
         </section>
 
         <!-- 5. SECTION PORTOFOLIO (PRODUCTION LAB UPDATE) -->
-        <section class="py-20 md:py-24 px-4 bg-brand-panel border-b border-brand-border">
+        <section class="py-20 md:py-24 px-4 bg-brand-panel border-b border-brand-border cv-auto">
             <div class="max-w-7xl mx-auto animate-on-scroll">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="font-heading text-3xl md:text-5xl font-black text-white mb-3 md:mb-4 uppercase tracking-tighter">
                         PRODUCTION LAB
                     </h2>
-                    <p class="text-brand-muted font-mono text-xs md:text-sm uppercase tracking-widest">Dapur rahasia dimana mahakarya lu diciptakan.</p>
+                    <p class="text-brand-muted font-mono text-xs md:text-sm uppercase tracking-widest">Dapur rahasia konveksi kaos sablon lu.</p>
                 </div>
 
-                <!-- Expanded Professional 6-Grid Layout -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                    <!-- Foto Sablon Pro -->
                     <figure class="relative group overflow-hidden bg-brand-bg border border-brand-border p-2">
-                        <div class="overflow-hidden aspect-[4/3]">
-                            <img src="sablon_pl.png" alt="Proses Cetak Sablon Manual Presisi" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+                        <div class="overflow-hidden aspect-[4/3] bg-zinc-900">
+                            <img src="sablon_pl.png" alt="Proses Cetak Sablon Manual Presisi Plastisol" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
                         </div>
                         <figcaption class="absolute bottom-4 left-4 bg-black/90 backdrop-blur border border-brand-border text-[10px] md:text-xs font-mono font-bold text-brand-accent px-3 py-1.5 uppercase tracking-widest">01 / Sablon Plastisol</figcaption>
                     </figure>
                     
-                    <!-- Foto Cutting Bahan -->
                     <figure class="relative group overflow-hidden bg-brand-bg border border-brand-border p-2">
-                        <div class="overflow-hidden aspect-[4/3]">
-                            <img src="pola_cut.png" alt="Pemotongan Bahan Kain Katun" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+                        <div class="overflow-hidden aspect-[4/3] bg-zinc-900">
+                            <img src="pola_cut.png" alt="Pemotongan Bahan Kain Katun Kaos" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
                         </div>
                         <figcaption class="absolute bottom-4 left-4 bg-black/90 backdrop-blur border border-brand-border text-[10px] md:text-xs font-mono font-bold text-brand-accent px-3 py-1.5 uppercase tracking-widest">02 / Pola & Cutting</figcaption>
                     </figure>
 
-                    <!-- Foto Jahit -->
                     <figure class="relative group overflow-hidden bg-brand-bg border border-brand-border p-2">
-                        <div class="overflow-hidden aspect-[4/3]">
-                            <img src="jahit_rantai.jpg" alt="Kerapian Jahitan Rantai" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+                        <div class="overflow-hidden aspect-[4/3] bg-zinc-900">
+                            <img src="jahit_rantai.jpg" alt="Kerapian Jahitan Rantai Baju" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
                         </div>
                         <figcaption class="absolute bottom-4 left-4 bg-black/90 backdrop-blur border border-brand-border text-[10px] md:text-xs font-mono font-bold text-brand-accent px-3 py-1.5 uppercase tracking-widest">03 / Jahit Rantai Presisi</figcaption>
                     </figure>
 
-                    <!-- Foto QC/Detailing -->
                     <figure class="relative group overflow-hidden bg-brand-bg border border-brand-border p-2">
-                        <div class="overflow-hidden aspect-[4/3]">
-                            <img src="cuality_control.png" alt="Quality Control Sablon Baju" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+                        <div class="overflow-hidden aspect-[4/3] bg-zinc-900">
+                            <img src="cuality_control.png" alt="Quality Control Sablon Baju" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
                         </div>
                         <figcaption class="absolute bottom-4 left-4 bg-black/90 backdrop-blur border border-brand-border text-[10px] md:text-xs font-mono font-bold text-brand-accent px-3 py-1.5 uppercase tracking-widest">04 / Quality Control</figcaption>
                     </figure>
 
-                    <!-- Foto Aksesoris Label -->
                     <figure class="relative group overflow-hidden bg-brand-bg border border-brand-border p-2">
-                        <div class="overflow-hidden aspect-[4/3]">
-                            <img src="label.jpeg" alt="Pemasangan Hangtag Custom Brand" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+                        <div class="overflow-hidden aspect-[4/3] bg-zinc-900">
+                            <img src="label.jpeg" alt="Pemasangan Hangtag Custom Brand Clothing" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
                         </div>
                         <figcaption class="absolute bottom-4 left-4 bg-black/90 backdrop-blur border border-brand-border text-[10px] md:text-xs font-mono font-bold text-brand-accent px-3 py-1.5 uppercase tracking-widest">05 / Label & Hangtag</figcaption>
                     </figure>
 
-                    <!-- Foto Packing/Finishing -->
                     <figure class="relative group overflow-hidden bg-brand-bg border border-brand-border p-2">
-                        <div class="overflow-hidden aspect-[4/3]">
-                            <img src="rilis.jpg" alt="Hasil Baju Lipat Packing Siap Jual" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+                        <div class="overflow-hidden aspect-[4/3] bg-zinc-900">
+                            <img src="rilis.jpg" alt="Hasil Baju Lipat Packing Siap Jual" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
                         </div>
                         <figcaption class="absolute bottom-4 left-4 bg-black/90 backdrop-blur border border-brand-border text-[10px] md:text-xs font-mono font-bold text-brand-accent px-3 py-1.5 uppercase tracking-widest">06 / Finishing Siap Jual</figcaption>
                     </figure>
                 </div>
 
-                <!-- NEW: TOMBOL TOGGLE DETAIL PRAPRODUKSI -->
+                <!-- SLIDER DETAIL PRAPRODUKSI -->
                 <div class="text-center mt-12 md:mt-16">
                     <button id="togglePraproduksiBtn" aria-expanded="false" aria-controls="praproduksiContainer" class="group focus:outline-none flex flex-col items-center mx-auto text-brand-muted hover:text-white transition duration-300">
                         <span id="toggleText" class="font-mono text-xs md:text-sm tracking-widest uppercase mb-3 border-b border-transparent group-hover:border-brand-accent pb-1 transition-all">Lihat Detail Praproduksi</span>
                         <div class="w-12 h-12 rounded-full border border-brand-border flex items-center justify-center bg-brand-bg group-hover:border-brand-accent group-hover:bg-brand-accent group-hover:text-black transition duration-300 shadow-[0_0_15px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_rgba(204,255,0,0.3)]">
-                            <i id="toggleIcon" class="fas fa-chevron-down text-lg animate-bounce group-hover:animate-none transition-transform duration-300"></i>
+                            <i id="toggleIcon" class="fas fa-chevron-down text-lg animate-bounce group-hover:animate-none transition-transform duration-300" aria-hidden="true"></i>
                         </div>
                     </button>
                 </div>
 
-                <!-- NEW: SLIDER DETAIL PRAPRODUKSI (HIDDEN DEFAULT) -->
                 <div id="praproduksiContainer" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0 mt-0">
                     <div class="relative w-full h-[400px] md:h-[600px] mt-8 bg-black border border-brand-border group/slider overflow-hidden rounded-sm">
                         
-                        <!-- Slider Track -->
                         <div id="sliderTrack" class="flex w-[400%] h-full transition-transform duration-700 ease-in-out">
-                            <!-- Slide 1 -->
-                            <div class="w-1/4 h-full relative group/slide cursor-pointer overflow-hidden">
-                                <img src="kain.jpeg" alt="Brainstorming Desain" class="w-full h-full object-cover grayscale group-hover/slide:grayscale-0 group-hover/slide:scale-105 transition duration-700">
+                            <div class="w-1/4 h-full relative group/slide cursor-pointer overflow-hidden bg-zinc-900">
+                                <img src="kain.jpeg" alt="Bahan & Warna Custom T-shirt" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover/slide:grayscale-0 group-hover/slide:scale-105 transition duration-700">
                                 <div class="absolute inset-0 bg-black/70 opacity-0 group-hover/slide:opacity-100 transition duration-500 backdrop-blur-sm flex items-center justify-center">
                                     <div class="text-center transform translate-y-4 group-hover/slide:translate-y-0 transition duration-500">
                                         <h4 class="text-brand-accent font-heading text-2xl md:text-4xl font-black uppercase mb-2 tracking-widest drop-shadow-[0_0_10px_rgba(204,255,0,0.3)]">01 / Bahan & Warna</h4>
-                                        <p class="text-white font-mono text-sm md:text-base max-w-lg mx-auto px-4 leading-relaxed">Konsumen memilih bahan dan warna untuk desain mereka.</p>
+                                        <p class="text-white font-mono text-sm md:text-base max-w-lg mx-auto px-4 leading-relaxed">Konsumen memilih bahan t-shirt dan warna konveksi untuk desain mereka.</p>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Slide 2 -->
-                            <div class="w-1/4 h-full relative group/slide cursor-pointer overflow-hidden">
-                                <img src="cut.jpeg" alt="Pemilihan Material Kain" class="w-full h-full object-cover grayscale group-hover/slide:grayscale-0 group-hover/slide:scale-105 transition duration-700">
+                            <div class="w-1/4 h-full relative group/slide cursor-pointer overflow-hidden bg-zinc-900">
+                                <img src="cut.jpeg" alt="Cutting Bahan Sablon Kaos" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover/slide:grayscale-0 group-hover/slide:scale-105 transition duration-700">
                                 <div class="absolute inset-0 bg-black/70 opacity-0 group-hover/slide:opacity-100 transition duration-500 backdrop-blur-sm flex items-center justify-center">
                                     <div class="text-center transform translate-y-4 group-hover/slide:translate-y-0 transition duration-500">
                                         <h4 class="text-brand-accent font-heading text-2xl md:text-4xl font-black uppercase mb-2 tracking-widest drop-shadow-[0_0_10px_rgba(204,255,0,0.3)]">02 / Pola & Cutting Bahan</h4>
-                                        <p class="text-white font-mono text-sm md:text-base max-w-lg mx-auto px-4 leading-relaxed">Pemotongan bahan yang sudah anda pilih.</p>
+                                        <p class="text-white font-mono text-sm md:text-base max-w-lg mx-auto px-4 leading-relaxed">Pemotongan bahan konveksi yang sudah anda pilih.</p>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Slide 3 -->
-                            <div class="w-1/4 h-full relative group/slide cursor-pointer overflow-hidden">
-                                <img src="jahit.jpeg" alt="Pola dan Cutting" class="w-full h-full object-cover grayscale group-hover/slide:grayscale-0 group-hover/slide:scale-105 transition duration-700">
+                            <div class="w-1/4 h-full relative group/slide cursor-pointer overflow-hidden bg-zinc-900">
+                                <img src="jahit.jpeg" alt="Proses Jahit Konveksi Baju" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover/slide:grayscale-0 group-hover/slide:scale-105 transition duration-700">
                                 <div class="absolute inset-0 bg-black/70 opacity-0 group-hover/slide:opacity-100 transition duration-500 backdrop-blur-sm flex items-center justify-center">
                                     <div class="text-center transform translate-y-4 group-hover/slide:translate-y-0 transition duration-500">
                                         <h4 class="text-brand-accent font-heading text-2xl md:text-4xl font-black uppercase mb-2 tracking-widest drop-shadow-[0_0_10px_rgba(204,255,0,0.3)]">03 / Jahit</h4>
-                                        <p class="text-white font-mono text-sm md:text-base max-w-lg mx-auto px-4 leading-relaxed">Proses penjahitan bahan yang sudah anda pilih setelah melewati proses cutting.</p>
+                                        <p class="text-white font-mono text-sm md:text-base max-w-lg mx-auto px-4 leading-relaxed">Proses penjahitan bahan pakaian setelah melewati proses cutting.</p>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Slide 4 -->
-                            <div class="w-1/4 h-full relative group/slide cursor-pointer overflow-hidden">
-                                <img src="sablon.jpeg" alt="Setup Screen Sablon" class="w-full h-full object-cover grayscale group-hover/slide:grayscale-0 group-hover/slide:scale-105 transition duration-700">
+                            <div class="w-1/4 h-full relative group/slide cursor-pointer overflow-hidden bg-zinc-900">
+                                <img src="sablon.jpeg" alt="Sablon T-shirt Custom Indonesia" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale group-hover/slide:grayscale-0 group-hover/slide:scale-105 transition duration-700">
                                 <div class="absolute inset-0 bg-black/70 opacity-0 group-hover/slide:opacity-100 transition duration-500 backdrop-blur-sm flex items-center justify-center">
                                     <div class="text-center transform translate-y-4 group-hover/slide:translate-y-0 transition duration-500">
                                         <h4 class="text-brand-accent font-heading text-2xl md:text-4xl font-black uppercase mb-2 tracking-widest drop-shadow-[0_0_10px_rgba(204,255,0,0.3)]">04 / Sablon</h4>
-                                        <p class="text-white font-mono text-sm md:text-base max-w-lg mx-auto px-4 leading-relaxed">Proses sablon brand sesuai desain anda.</p>
+                                        <p class="text-white font-mono text-sm md:text-base max-w-lg mx-auto px-4 leading-relaxed">Proses sablon kaos brand streetwear sesuai desain eksklusif anda.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Slider Indicators -->
                         <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20">
                             <button class="slide-indicator w-8 h-1 bg-brand-accent transition-colors duration-300 focus:outline-none" aria-label="Slide 1"></button>
                             <button class="slide-indicator w-8 h-1 bg-gray-600 hover:bg-gray-400 transition-colors duration-300 focus:outline-none" aria-label="Slide 2"></button>
@@ -465,42 +479,36 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- 6. SECTION TESTIMONI & PENGIRIMAN -->
-        <section class="py-20 md:py-24 px-4 bg-brand-bg border-b border-brand-border">
+        <section class="py-20 md:py-24 px-4 bg-brand-bg border-b border-brand-border cv-auto">
             <div class="max-w-6xl mx-auto animate-on-scroll">
                 <h2 class="font-heading text-3xl md:text-5xl font-black text-center mb-12 md:mb-16 text-white uppercase tracking-tighter">
                     TRUSTED BY 100+ BRANDS
                 </h2>
                 
                 <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-                    <!-- Mockup Chat WA (Dark Mode) -->
                     <div class="space-y-4">
-                        <!-- Chat 1 -->
-                        <article class="bg-[#1f2c34] text-gray-200 p-3 md:p-4 rounded-xl rounded-tr-none ml-auto max-w-[90%] md:max-w-[85%] border border-[#2a3942] relative">
-                            <p class="text-xs md:text-sm font-sans leading-relaxed">"Bro paketnya udah mendarat dengan aman!! Gila bahannya selembut itu, sablonannya juga rapi parah. Customerku pada nungguin drop ini. Next month aku repeat order 3 lusin ya."</p>
+                        <article class="bg-[#1f2c34] text-gray-200 p-3 md:p-4 rounded-xl rounded-tr-none ml-auto max-w-[90%] md:max-w-[85%] border border-[#2a3942] relative shadow-sm">
+                            <p class="text-xs md:text-sm font-sans leading-relaxed">"Bro paket konveksinya udah mendarat dengan aman!! Gila bahannya selembut itu, sablon kaosnya juga rapi parah. Customerku pada nungguin drop ini. Next month aku repeat order 3 lusin ya."</p>
                             <span class="text-[10px] text-gray-400 absolute bottom-1 right-2 font-mono">14:20 ✓✓</span>
                         </article>
-                        <!-- Chat 2 -->
-                        <article class="bg-[#1f2c34] text-gray-200 p-3 md:p-4 rounded-xl rounded-tr-none ml-auto max-w-[90%] md:max-w-[85%] border border-[#2a3942] relative">
-                            <p class="text-xs md:text-sm font-sans leading-relaxed">"Awalnya ragu krn modal mepet, tp untung dibantu desainin gratis sama tim sini. Hangtagnya jg bikin bajunya kelihatan mahal bgt. Solid work!"</p>
+                        <article class="bg-[#1f2c34] text-gray-200 p-3 md:p-4 rounded-xl rounded-tr-none ml-auto max-w-[90%] md:max-w-[85%] border border-[#2a3942] relative shadow-sm">
+                            <p class="text-xs md:text-sm font-sans leading-relaxed">"Awalnya ragu krn modal mepet, tp untung dibantu custom t-shirt desain gratis sama tim sini. Hangtagnya jg bikin bajunya kelihatan distro mahal bgt. Solid work!"</p>
                             <span class="text-[10px] text-gray-400 absolute bottom-1 right-2 font-mono">09:15 ✓✓</span>
                         </article>
-                        <!-- Chat 3 -->
-                        <article class="bg-[#1f2c34] text-gray-200 p-3 md:p-4 rounded-xl rounded-tr-none ml-auto max-w-[90%] md:max-w-[85%] border border-[#2a3942] relative">
-                            <p class="text-xs md:text-sm font-sans leading-relaxed">"Mantap, jahitan rantainya kuat. Buat harga pabrik ini sih worth it banget buat dijual lagi harga ritel. Siap-siap order artikel kedua."</p>
+                        <article class="bg-[#1f2c34] text-gray-200 p-3 md:p-4 rounded-xl rounded-tr-none ml-auto max-w-[90%] md:max-w-[85%] border border-[#2a3942] relative shadow-sm">
+                            <p class="text-xs md:text-sm font-sans leading-relaxed">"Mantap pabrik kaos Glomed, jahitan rantainya kuat. Buat harga pabrik ini sih worth it banget buat dijual lagi harga ritel. Siap-siap order artikel kedua."</p>
                             <span class="text-[10px] text-gray-400 absolute bottom-1 right-2 font-mono">18:45 ✓✓</span>
                         </article>
                     </div>
 
-                    <!-- Foto Karung/Ekspedisi -->
                     <div class="relative bg-brand-panel border border-brand-border min-h-[300px] md:min-h-[350px] overflow-hidden group">
-                        <img src="paket.jpeg" alt="Pengiriman Kargo Besar" loading="lazy" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 z-0 bg-brand-bg">
+                        <img src="paket.jpeg" alt="Pengiriman Kargo Besar Konveksi" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 z-0 bg-brand-bg">
                         <div class="absolute bottom-4 left-4 right-4 bg-black/95 backdrop-blur-md border border-brand-border text-white p-4 md:p-6 text-center z-10 shadow-2xl">
-                            <i class="fas fa-truck-fast text-3xl md:text-4xl text-brand-accent mb-2 md:mb-3"></i>
+                            <i class="fas fa-truck-fast text-3xl md:text-4xl text-brand-accent mb-2 md:mb-3" aria-hidden="true"></i>
                             <h4 class="font-heading font-black text-base md:text-xl uppercase tracking-wide text-white">Kirim Ke Seluruh Indonesia</h4>
                             <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 font-mono">Via Kargo termurah, ongkir aman.</p>
                         </div>
@@ -510,7 +518,7 @@
         </section>
 
         <!-- 7. SECTION FAQ -->
-        <section class="py-20 md:py-24 px-4 bg-brand-panel border-b border-brand-border">
+        <section class="py-20 md:py-24 px-4 bg-brand-panel border-b border-brand-border cv-auto">
             <div class="max-w-3xl mx-auto animate-on-scroll">
                 <h2 class="font-heading text-3xl md:text-5xl font-black text-center mb-10 md:mb-12 text-white uppercase tracking-tighter">
                     F.A.Q
@@ -518,56 +526,115 @@
                 
                 <div class="space-y-4 font-sans">
                     <article class="bg-brand-bg border border-brand-border p-5 md:p-6 hover:border-brand-accent transition duration-300">
-                        <h4 class="font-bold text-white flex items-center gap-2 md:gap-3 mb-2 md:mb-3 text-base md:text-lg">
-                            <span class="text-brand-accent font-mono">Q.</span> Berapa lama pengerjaannya?
-                        </h4>
-                        <p class="text-xs md:text-sm text-brand-muted pl-6 md:pl-8 leading-relaxed">Estimasi pengerjaan standar adalah 7-14 hari kerja setelah desain dan DP (Down Payment) di-ACC. Tergantung dari antrean produksi saat itu.</p>
+                        <h3 class="font-bold text-white flex items-center gap-2 md:gap-3 mb-2 md:mb-3 text-base md:text-lg">
+                            <span class="text-brand-accent font-mono" aria-hidden="true">Q.</span> Berapa lama pengerjaan sablon kaos?
+                        </h3>
+                        <p class="text-xs md:text-sm text-brand-muted pl-6 md:pl-8 leading-relaxed">Estimasi pengerjaan pabrik konveksi standar adalah 7-14 hari kerja setelah desain dan DP (Down Payment) di-ACC. Tergantung antrean produksi saat itu.</p>
                     </article>
                     <article class="bg-brand-bg border border-brand-border p-5 md:p-6 hover:border-brand-accent transition duration-300">
-                        <h4 class="font-bold text-white flex items-center gap-2 md:gap-3 mb-2 md:mb-3 text-base md:text-lg">
-                            <span class="text-brand-accent font-mono">Q.</span> Bisa campur ukuran/size dalam 1 lusin?
-                        </h4>
-                        <p class="text-xs md:text-sm text-brand-muted pl-6 md:pl-8 leading-relaxed">Tentu bisa! Untuk 1 lusin (12 pcs) Anda bebas pilih campur size mulai dari S, M, L, hingga XL tanpa ada biaya tambahan.</p>
+                        <h3 class="font-bold text-white flex items-center gap-2 md:gap-3 mb-2 md:mb-3 text-base md:text-lg">
+                            <span class="text-brand-accent font-mono" aria-hidden="true">Q.</span> Bisa campur ukuran/size custom t-shirt?
+                        </h3>
+                        <p class="text-xs md:text-sm text-brand-muted pl-6 md:pl-8 leading-relaxed">Tentu bisa! Untuk 1 lusin (12 pcs) pesanan custom t-shirt Indonesia, Anda bebas pilih campur size mulai dari S, M, L, hingga XL tanpa ada biaya tambahan.</p>
                     </article>
                     <article class="bg-brand-bg border border-brand-border p-5 md:p-6 hover:border-brand-accent transition duration-300">
-                        <h4 class="font-bold text-white flex items-center gap-2 md:gap-3 mb-2 md:mb-3 text-base md:text-lg">
-                            <span class="text-brand-accent font-mono">Q.</span> Bahan kaosnya apa?
-                        </h4>
-                        <p class="text-xs md:text-sm text-brand-muted pl-6 md:pl-8 leading-relaxed">Kami menggunakan material standar distro premium: Cotton Combed 30s atau 24s grade A. Bahannya super lembut, adem, dan menyerap keringat.</p>
+                        <h3 class="font-bold text-white flex items-center gap-2 md:gap-3 mb-2 md:mb-3 text-base md:text-lg">
+                            <span class="text-brand-accent font-mono" aria-hidden="true">Q.</span> Bahan kaos dan tinta sablonnya apa?
+                        </h3>
+                        <p class="text-xs md:text-sm text-brand-muted pl-6 md:pl-8 leading-relaxed">Kami menggunakan material konveksi kaos distro premium: Cotton Combed 30s/24s grade A. Tinta menggunakan Plastisol atau Rubber kualitas ekspor, super awet dan anti retak.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- 8. FINAL CTA BAWAH (NO FORM) -->
+        <!-- SEO KNOWLEDGE BASE / BRAND GUIDE (NEW) -->
+        <section class="py-16 md:py-24 px-4 bg-brand-bg border-b border-brand-border cv-auto text-brand-muted font-sans">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-heading font-black text-2xl md:text-3xl text-white mb-8 uppercase tracking-tighter border-l-4 border-brand-accent pl-4">
+                    Panduan Sukses Membangun Brand Clothing
+                </h2>
+                
+                <div class="space-y-3">
+                    <!-- Accordion 1 -->
+                    <div class="border border-brand-border bg-brand-panel overflow-hidden">
+                        <button class="w-full px-5 py-4 flex justify-between items-center text-left focus:outline-none hover:bg-zinc-900 transition-colors group" onclick="toggleAccordion('seo1')" aria-expanded="false">
+                            <h3 class="font-heading font-bold text-sm md:text-base text-white uppercase tracking-wide pr-4">Pabrik Konveksi Kaos Custom</h3>
+                            <i id="icon-seo1" class="fas fa-plus text-brand-accent transition-transform duration-300" aria-hidden="true"></i>
+                        </button>
+                        <div id="content-seo1" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="px-5 pb-4 text-xs md:text-sm text-brand-muted leading-relaxed border-t border-brand-border pt-4">
+                                Bangun brand streetwear lu bareng <strong>konveksi kaos custom</strong> yang tepat. Glomed&co hadir sebagai pabrik rahasia untuk founder muda rilis apparel premium dengan modal minim, mulai 1 lusin aja.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 2 -->
+                    <div class="border border-brand-border bg-brand-panel overflow-hidden">
+                        <button class="w-full px-5 py-4 flex justify-between items-center text-left focus:outline-none hover:bg-zinc-900 transition-colors group" onclick="toggleAccordion('seo2')" aria-expanded="false">
+                            <h3 class="font-heading font-bold text-sm md:text-base text-white uppercase tracking-wide pr-4">Keunggulan Custom T-Shirt Indonesia</h3>
+                            <i id="icon-seo2" class="fas fa-plus text-brand-accent transition-transform duration-300" aria-hidden="true"></i>
+                        </button>
+                        <div id="content-seo2" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="px-5 pb-4 text-xs md:text-sm text-brand-muted leading-relaxed border-t border-brand-border pt-4">
+                                Kami pakai <em>Cotton Combed 30s/24s Grade A</em> yang adem & nyerap keringat. Plus, jahit rantai ganda bikin <strong>custom t-shirt Indonesia</strong> lu awet dan punya fitting setara brand global.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 3 -->
+                    <div class="border border-brand-border bg-brand-panel overflow-hidden">
+                        <button class="w-full px-5 py-4 flex justify-between items-center text-left focus:outline-none hover:bg-zinc-900 transition-colors group" onclick="toggleAccordion('seo3')" aria-expanded="false">
+                            <h3 class="font-heading font-bold text-sm md:text-base text-white uppercase tracking-wide pr-4">Evolusi Teknik Sablon Kaos Premium</h3>
+                            <i id="icon-seo3" class="fas fa-plus text-brand-accent transition-transform duration-300" aria-hidden="true"></i>
+                        </button>
+                        <div id="content-seo3" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="px-5 pb-4 text-xs md:text-sm text-brand-muted leading-relaxed border-t border-brand-border pt-4">
+                                Desain keren wajib dieksekusi presisi. Kami andalkan <strong>sablon kaos</strong> <em>Plastisol</em> untuk warna solid & anti-retak. Tersedia juga sablon Rubber, Discharge, hingga High Density (HD).
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 4 -->
+                    <div class="border border-brand-border bg-brand-panel overflow-hidden">
+                        <button class="w-full px-5 py-4 flex justify-between items-center text-left focus:outline-none hover:bg-zinc-900 transition-colors group" onclick="toggleAccordion('seo4')" aria-expanded="false">
+                            <h3 class="font-heading font-bold text-sm md:text-base text-white uppercase tracking-wide pr-4">Sistem Makloon Kaos Lengkap</h3>
+                            <i id="icon-seo4" class="fas fa-plus text-brand-accent transition-transform duration-300" aria-hidden="true"></i>
+                        </button>
+                        <div id="content-seo4" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="px-5 pb-4 text-xs md:text-sm text-brand-muted leading-relaxed border-t border-brand-border pt-4">
+                                <strong>Pabrik kaos distro</strong> <em>One-Stop Solution</em>. Dari bantu desain gratis sampai pasang <em>custom woven label & hangtag</em>, pesanan lu dikirim dalam kondisi 100% siap jual ke market.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FINAL CTA BAWAH -->
         <section id="form-order" class="py-20 md:py-32 px-4 bg-brand-bg relative pb-32">
             <div class="max-w-4xl mx-auto animate-on-scroll relative z-10">
-                
-                <!-- CTA Box Without Form -->
                 <div class="bg-brand-panel p-8 md:p-16 border border-brand-border shadow-[0_0_50px_rgba(0,0,0,0.5)] relative text-center">
-                    <!-- Decorative Elements -->
-                    <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-brand-accent"></div>
-                    <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-brand-accent"></div>
-                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-brand-accent"></div>
-                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-brand-accent"></div>
+                    <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-brand-accent" aria-hidden="true"></div>
+                    <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-brand-accent" aria-hidden="true"></div>
+                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-brand-accent" aria-hidden="true"></div>
+                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-brand-accent" aria-hidden="true"></div>
 
                     <h2 class="font-heading text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">
                         SIAP RILIS BRAND LU?
                     </h2>
                     <p class="text-brand-muted font-mono uppercase tracking-widest text-xs md:text-sm mb-10 max-w-xl mx-auto leading-relaxed">
-                        Konsultasi 100% Gratis. Tanya-tanya dulu soal bahan, harga, atau desain gapapa. Admin kami siap bantu.
+                        Konsultasi 100% Gratis. Tanya-tanya dulu soal bahan, harga sablon kaos, atau konveksi gapapa. Admin kami siap bantu.
                     </p>
 
-                    <button onclick="sendToWhatsApp(event)" aria-label="Konsultasi sekarang via WhatsApp" class="btn-wa-pulse w-full sm:w-auto inline-flex items-center justify-center bg-brand-wa text-white font-heading font-black text-lg md:text-2xl px-8 py-5 md:py-6 gap-3 uppercase tracking-widest hover:bg-green-500 transition border-2 border-transparent hover:border-white shadow-[0_0_20px_rgba(37,211,102,0.3)]">
-                        <i class="fab fa-whatsapp text-3xl md:text-4xl"></i> KONSULTASI ADMIN (WA)
+                    <button onclick="sendToWhatsApp(event)" aria-label="Konsultasi pembuatan brand sekarang via WhatsApp" class="btn-wa-pulse w-full sm:w-auto inline-flex items-center justify-center bg-brand-wa text-white font-heading font-black text-lg md:text-2xl px-8 py-5 md:py-6 gap-3 uppercase tracking-widest hover:bg-green-500 transition border-2 border-transparent hover:border-white shadow-[0_0_20px_rgba(37,211,102,0.3)]">
+                        <i class="fab fa-whatsapp text-3xl md:text-4xl" aria-hidden="true"></i> CHAT WHATSAPP SEKARANG
                     </button>
                     
                     <p class="text-center text-[10px] md:text-xs font-mono text-gray-500 mt-6 uppercase tracking-widest">
-                        <i class="fas fa-lock mr-1"></i> Fast Response. Tidak ada kewajiban membeli.
+                        <i class="fas fa-lock mr-1" aria-hidden="true"></i> Fast Response. Tidak ada kewajiban membeli.
                     </p>
                 </div>
             </div>
-            <!-- Background Glow -->
             <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[800px] h-[300px] bg-brand-wa/10 blur-[100px] pointer-events-none z-0"></div>
         </section>
     </main>
@@ -576,47 +643,32 @@
     <footer class="bg-black text-brand-muted py-10 text-center border-t border-brand-border">
         <h2 class="font-heading font-black text-xl md:text-2xl text-white tracking-tighter mb-4 uppercase">Glomed&co Factory</h2>
         <div class="flex justify-center gap-6 mb-6">
-            <a href="#" aria-label="Kunjungi Instagram Kami" class="text-gray-500 hover:text-brand-accent transition text-xl"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Kunjungi TikTok Kami" class="text-gray-500 hover:text-brand-accent transition text-xl"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="Kunjungi Instagram Glomed Konveksi" class="text-gray-500 hover:text-brand-accent transition text-xl"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Kunjungi TikTok Glomed Sablon Kaos" class="text-gray-500 hover:text-brand-accent transition text-xl"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
         </div>
-        <p class="text-[10px] md:text-xs font-mono tracking-widest uppercase">© 2026 Glomed&co. All Rights Reserved.</p>
+        <p class="text-[10px] md:text-xs font-mono tracking-widest uppercase">© 2026 Glomed&co Konveksi Sablon Kaos Custom T-Shirt Indonesia. All Rights Reserved.</p>
     </footer>
 
     <!-- STICKY MOBILE CTA -->
     <div class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-black border-t border-brand-border p-3 shadow-[0_-10px_30px_rgba(0,0,0,0.8)]">
-        <button onclick="sendToWhatsApp(event)" aria-label="Tanya Admin di WhatsApp" class="btn-wa-pulse w-full bg-brand-wa text-white font-heading font-black text-sm py-4 flex items-center justify-center gap-2 uppercase tracking-wide rounded-sm border border-transparent">
-            <i class="fab fa-whatsapp text-xl"></i> TANYA ADMIN / KONSULTASI
+        <button onclick="sendToWhatsApp(event)" aria-label="Order Sekarang di WhatsApp" class="btn-wa-pulse w-full bg-brand-wa text-white font-heading font-black text-sm py-4 flex items-center justify-center gap-2 uppercase tracking-wide rounded-sm border border-transparent">
+            <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i> ORDER SEKARANG (WA)
         </button>
     </div>
 
-    <!-- JAVASCRIPT LOGIC -->
-    <script>
-        // 1. Meta Pixel Tracking Form Submit & WA Redirect Logic
+    <!-- JAVASCRIPT LOGIC (Deferred execution) -->
+    <script defer>
         function sendToWhatsApp(event) {
-            // Mencegah default action jika dipanggil dari tag 'a'
             if(event) event.preventDefault(); 
+            if (typeof fbq === 'function') { fbq('track', 'Lead'); }
             
-            // Trigger Event Meta Pixel Lead / InitiateCheckout
-            if (typeof fbq === 'function') {
-                fbq('track', 'Lead');
-            }
-
-            // NOMOR WHATSAPP CS ANDA (Ganti dengan format 62...)
             const nomorAdmin = "6281234567890"; 
-
-            // Text karena form sudah dihapus, berikan pesan pancingan agar customer mudah memulai chat
-            const pesan = `Halo Admin Glomed&co,\n\nSaya mau konsultasi untuk bikin brand clothing sendiri (Paket Mulai 720k).\n\nBoleh minta info lengkap, list bahan, dan prosedurnya?`;
-            
-            // Encode teks agar aman untuk URL
+            const pesan = `Halo Admin Glomed&co Konveksi,\n\nSaya mau konsultasi untuk bikin brand clothing sendiri (Paket Mulai 720k).\n\nBoleh minta info lengkap, list bahan sablon kaos, dan prosedurnya?`;
             const link = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesan)}`;
-            
-            // Buka di tab/aplikasi WA
             window.open(link, '_blank');
         }
 
-        // 2. Smooth Intersection Observer (Animasi Fade Up saat di-scroll)
         document.addEventListener("DOMContentLoaded", function() {
-            // Deteksi jika user lebih suka "reduced motion" (Aksesibilitas)
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             
             if(!prefersReducedMotion) {
@@ -624,131 +676,109 @@
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
                             entry.target.classList.add('is-visible');
-                            // Optional: Unobserve setelah animasi selesai agar tidak berulang
-                        // observer.unobserve(entry.target); 
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+                            observer.unobserve(entry.target); // Unobserve to improve performance
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
-            document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-                observer.observe(el);
-            });
-        } else {
-            // Langsung tampilkan tanpa animasi jika user memiliki setting animasi dimatikan
-            document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-                el.style.opacity = "1";
+                document.querySelectorAll('.animate-on-scroll').forEach((el) => { observer.observe(el); });
+            } else {
+                document.querySelectorAll('.animate-on-scroll').forEach((el) => { el.style.opacity = "1"; });
+            }
+        });
+
+        // LOGIC TOGGLE & SLIDER PRAPRODUKSI
+        const toggleBtn = document.getElementById('togglePraproduksiBtn');
+        const container = document.getElementById('praproduksiContainer');
+        const icon = document.getElementById('toggleIcon');
+        const toggleText = document.getElementById('toggleText');
+        const track = document.getElementById('sliderTrack');
+        const indicators = document.querySelectorAll('.slide-indicator');
+        
+        let isExpanded = false;
+        let currentSlide = 0;
+        const totalSlides = 4;
+        let slideInterval;
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentSlide * 25}%)`;
+            indicators.forEach((ind, index) => {
+                if(index === currentSlide) {
+                    ind.classList.remove('bg-gray-600');
+                    ind.classList.add('bg-brand-accent');
+                } else {
+                    ind.classList.remove('bg-brand-accent');
+                    ind.classList.add('bg-gray-600');
+                }
             });
         }
-    });
 
-    // 3. LOGIC UNTUK TOGGLE & SLIDER PRAPRODUKSI
-    const toggleBtn = document.getElementById('togglePraproduksiBtn');
-    const container = document.getElementById('praproduksiContainer');
-    const icon = document.getElementById('toggleIcon');
-    const toggleText = document.getElementById('toggleText');
-    const track = document.getElementById('sliderTrack');
-    const indicators = document.querySelectorAll('.slide-indicator');
-    
-    let isExpanded = false;
-    let currentSlide = 0;
-    const totalSlides = 4;
-    let slideInterval;
+        function nextSlide() { currentSlide = (currentSlide + 1) % totalSlides; updateSlider(); }
 
-    // Update posisi slider dan warna indikator
-    function updateSlider() {
-        track.style.transform = `translateX(-${currentSlide * 25}%)`;
+        function startSlide() { if(isExpanded && !slideInterval) { slideInterval = setInterval(nextSlide, 3500); } }
+
+        function stopSlide() { clearInterval(slideInterval); slideInterval = null; }
+
         indicators.forEach((ind, index) => {
-            if(index === currentSlide) {
-                ind.classList.remove('bg-gray-600');
-                ind.classList.add('bg-brand-accent');
-            } else {
-                ind.classList.remove('bg-brand-accent');
-                ind.classList.add('bg-gray-600');
-            }
+            ind.addEventListener('click', () => {
+                currentSlide = index; updateSlider(); stopSlide(); startSlide(); 
+            });
         });
-    }
 
-    // Geser ke slide berikutnya
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateSlider();
-    }
-
-    // Mulai auto-slide
-    function startSlide() {
-        if(isExpanded && !slideInterval) {
-            slideInterval = setInterval(nextSlide, 3500); // Ganti slide tiap 3.5 detik
+        if(toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                isExpanded = !isExpanded;
+                toggleBtn.setAttribute('aria-expanded', isExpanded);
+                
+                if (isExpanded) {
+                    container.style.maxHeight = "1000px";
+                    container.classList.remove('opacity-0', 'mt-0');
+                    container.classList.add('opacity-100', 'mt-8');
+                    icon.classList.remove('fa-chevron-down', 'animate-bounce');
+                    icon.classList.add('fa-chevron-up');
+                    toggleText.textContent = "Tutup Detail Praproduksi";
+                    startSlide();
+                } else {
+                    container.style.maxHeight = "0px";
+                    container.classList.remove('opacity-100', 'mt-8');
+                    container.classList.add('opacity-0', 'mt-0');
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down', 'animate-bounce');
+                    toggleText.textContent = "Lihat Detail Praproduksi";
+                    stopSlide();
+                    setTimeout(() => { toggleBtn.scrollIntoView({ behavior: "smooth", block: "center" }); }, 300);
+                }
+            });
         }
-    }
 
-    // Hentikan auto-slide
-    function stopSlide() {
-        clearInterval(slideInterval);
-        slideInterval = null;
-    }
+        const sliderGroup = document.querySelector('.group\\/slider');
+        if(sliderGroup) {
+            sliderGroup.addEventListener('mouseenter', stopSlide);
+            sliderGroup.addEventListener('mouseleave', startSlide);
+            sliderGroup.addEventListener('touchstart', stopSlide, {passive: true});
+            sliderGroup.addEventListener('touchend', startSlide, {passive: true});
+        }
 
-    // Navigasi manual via Indikator (Garis Bawah)
-    indicators.forEach((ind, index) => {
-        ind.addEventListener('click', () => {
-            currentSlide = index;
-            updateSlider();
-            stopSlide();
-            startSlide(); // Reset timer saat diklik
-        });
-    });
-
-    // Buka/Tutup Section Praproduksi
-    if(toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-            isExpanded = !isExpanded;
-            toggleBtn.setAttribute('aria-expanded', isExpanded);
+        // LOGIC ACCORDION SEO
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+            const button = icon.parentElement;
             
-            if (isExpanded) {
-                // Saat Expand / Buka
-                container.style.maxHeight = "1000px";
-                container.classList.remove('opacity-0', 'mt-0');
-                container.classList.add('opacity-100', 'mt-8');
-                
-                // Animasi Panah Berputar
-                icon.classList.remove('fa-chevron-down', 'animate-bounce');
-                icon.classList.add('fa-chevron-up');
-                
-                toggleText.textContent = "Tutup Detail Praproduksi";
-                
-                // Langsung jalankan slide
-                startSlide();
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                // Collapse
+                content.style.maxHeight = '0px';
+                icon.classList.remove('rotate-45', 'text-white');
+                icon.classList.add('text-brand-accent');
+                button.setAttribute('aria-expanded', 'false');
             } else {
-                // Saat Minimize / Tutup
-                container.style.maxHeight = "0px";
-                container.classList.remove('opacity-100', 'mt-8');
-                container.classList.add('opacity-0', 'mt-0');
-                
-                // Animasi Panah Kembali Normal
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down', 'animate-bounce');
-                
-                toggleText.textContent = "Lihat Detail Praproduksi";
-                
-                // Matikan slide agar tidak membebani memori
-                stopSlide();
-                
-                // Scroll kembali perlahan ke tombol (opsional agar UX rapi)
-                setTimeout(() => {
-                    toggleBtn.scrollIntoView({ behavior: "smooth", block: "center" });
-                }, 300);
+                // Expand
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.classList.add('rotate-45', 'text-white');
+                icon.classList.remove('text-brand-accent');
+                button.setAttribute('aria-expanded', 'true');
             }
-        });
-    }
-
-    // Pause slider ketika cursor di-hover ke gambar
-    const sliderGroup = document.querySelector('.group\\/slider');
-    if(sliderGroup) {
-        sliderGroup.addEventListener('mouseenter', stopSlide);
-        sliderGroup.addEventListener('mouseleave', startSlide);
-        // Dukungan untuk layar sentuh (mobile)
-        sliderGroup.addEventListener('touchstart', stopSlide);
-        sliderGroup.addEventListener('touchend', startSlide);
-    }
-</script>
+        }
+    </script>
 </body>
 </html>
