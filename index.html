@@ -574,10 +574,39 @@
                 </h2>
                 
                 <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-                    <!-- TESTIMONI SCREENSHOT REAL WA FULL SCREEN -->
-                    <div class="flex justify-center items-center">
-                        <!-- Ganti testi-wa-full.jpg dengan nama file screenshot chat Anda -->
-                        <img src="testi-wa-1.jpeg" alt="Testimoni Real WhatsApp Customer" class="w-full max-w-sm md:max-w-md h-auto rounded-xl border border-[#2a3942] shadow-sm hover:scale-[1.02] transition-transform duration-300" loading="lazy">
+                    <!-- TESTIMONI SLIDER (REAL WA FULL SCREEN) -->
+                    <div class="relative w-full max-w-sm md:max-w-md mx-auto group cursor-grab active:cursor-grabbing">
+                        <div class="overflow-hidden rounded-xl border border-[#2a3942] shadow-sm">
+                            <div id="testiSlider" class="flex transition-transform duration-500 ease-in-out w-full select-none">
+                                <!-- Slide 1 -->
+                                <div class="w-full shrink-0">
+                                    <img src="testi-wa-1.jpeg" alt="Testimoni Real WhatsApp Customer 1" class="w-full h-auto object-cover pointer-events-none" loading="lazy">
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="w-full shrink-0">
+                                    <img src="testi-wa-2.jpeg" alt="Testimoni Real WhatsApp Customer 2" class="w-full h-auto object-cover pointer-events-none" loading="lazy">
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="w-full shrink-0">
+                                    <img src="testi-wa-3.jpeg" alt="Testimoni Real WhatsApp Customer 3" class="w-full h-auto object-cover pointer-events-none" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tombol Kiri Kanan -->
+                        <button onclick="prevTesti()" aria-label="Testimoni Sebelumnya" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand-accent hover:text-black focus:outline-none z-10 border border-white/20 shadow-md">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <button onclick="nextTesti()" aria-label="Testimoni Selanjutnya" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand-accent hover:text-black focus:outline-none z-10 border border-white/20 shadow-md">
+                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                        
+                        <!-- Indikator Titik -->
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+                            <button onclick="goToTesti(0)" class="testi-dot w-2.5 h-2.5 rounded-full bg-brand-accent transition-colors duration-300 focus:outline-none shadow-sm" aria-label="Ke slide 1"></button>
+                            <button onclick="goToTesti(1)" class="testi-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-colors duration-300 focus:outline-none shadow-sm" aria-label="Ke slide 2"></button>
+                            <button onclick="goToTesti(2)" class="testi-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-colors duration-300 focus:outline-none shadow-sm" aria-label="Ke slide 3"></button>
+                        </div>
                     </div>
 
                     <!-- BANNER PENGIRIMAN -->
