@@ -806,6 +806,7 @@
     </footer>
 
     <!-- JAVASCRIPT LOGIC (Deferred execution) -->
+    <!-- JAVASCRIPT LOGIC (Deferred execution) -->
     <script defer>
         function sendToWhatsApp(event) {
             if(event) event.preventDefault(); 
@@ -886,6 +887,66 @@
                 icon.classList.add('rotate-45', 'text-white');
                 icon.classList.remove('text-brand-accent');
                 button.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // LOGIC TESTIMONI SLIDER (TOMBOL & SWIPE)
+        let currentTesti = 0;
+        const totalTesti = 3;
+        const testiSlider = document.getElementById('testiSlider');
+        const testiDots = document.querySelectorAll('.testi-dot');
+
+        function updateTestiSlider() {
+            if (!testiSlider) return;
+            testiSlider.style.transform = `translateX(-${currentTesti * 100}%)`;
+            testiDots.forEach((dot, index) => {
+                if (index === currentTesti) {
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-brand-accent');
+                } else {
+                    dot.classList.remove('bg-brand-accent');
+                    dot.classList.add('bg-white/50');
+                }
+            });
+        }
+
+        window.nextTesti = function() {
+            currentTesti = (currentTesti + 1) % totalTesti;
+            updateTestiSlider();
+        }
+
+        window.prevTesti = function() {
+            currentTesti = (currentTesti - 1 + totalTesti) % totalTesti;
+            updateTestiSlider();
+        }
+
+        window.goToTesti = function(index) {
+            currentTesti = index;
+            updateTestiSlider();
+        }
+
+        // Fungsi Swipe untuk HP
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        if (testiSlider) {
+            testiSlider.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+
+            testiSlider.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, {passive: true});
+        }
+
+        function handleSwipe() {
+            const threshold = 50; // Minimal geseran jari (px)
+            if (touchEndX < touchStartX - threshold) {
+                window.nextTesti(); // Swipe ke kiri (Next)
+            }
+            if (touchEndX > touchStartX + threshold) {
+                window.prevTesti(); // Swipe ke kanan (Prev)
             }
         }
     </script>
