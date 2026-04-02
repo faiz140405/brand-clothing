@@ -383,101 +383,111 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
                     <!-- Step 1 -->
-                    <article class="bg-brand-panel border border-brand-border hover:border-brand-accent transition duration-300 relative flex flex-col h-full overflow-hidden group p-6 md:p-8 min-h-[250px]">
+                    <article class="bg-black border border-brand-border hover:border-brand-accent transition duration-500 relative flex flex-col h-full overflow-hidden group min-h-[250px] md:min-h-[280px]">
                         <!-- Background Image -->
-                        <img src="konsultasi.jpeg" alt="Konsultasi" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 group-hover:opacity-40 group-hover:scale-105 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/50 to-transparent z-0 pointer-events-none"></div>
+                        <img src="gambar-step-1.png" alt="Konsultasi" class="absolute inset-0 w-full h-full object-cover z-0 opacity-70 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700 ease-in-out">
                         
-                        <!-- Konten Menumpuk -->
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="absolute -top-2 -right-2 text-brand-accent font-black text-5xl opacity-40 font-heading transition duration-300 group-hover:opacity-80">#1</div>
-                            <div class="mt-auto pt-12">
-                                <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide drop-shadow-lg">Konsultasi</h3>
-                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed drop-shadow-md">Konsultasi produk yang akan dipesan, Pemilihan bahan dan warna, ukuran, sablon/bordir, dll.</p>
+                        <!-- Dark Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 group-hover:from-black/95 group-hover:via-black/70 transition-all duration-500 z-0 pointer-events-none"></div>
+                        
+                        <div class="absolute top-4 right-4 z-10 text-brand-accent font-black text-5xl md:text-6xl font-heading opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 drop-shadow-md">#1</div>
+                        
+                        <!-- Konten Bawah (Title & Desc) -->
+                        <div class="relative z-10 h-full p-6 md:p-8 flex flex-col justify-end">
+                            <h3 class="font-heading font-black text-xl md:text-2xl text-white uppercase tracking-wide drop-shadow-lg group-hover:text-brand-accent transition-colors duration-300">Konsultasi</h3>
+                            
+                            <div class="max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden">
+                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed pt-3 drop-shadow-md">Konsultasi produk yang akan dipesan, Pemilihan bahan dan warna, ukuran, sablon/bordir, dll.</p>
                             </div>
                         </div>
                     </article>
                     
                     <!-- Step 2 -->
-                    <article class="bg-brand-panel border border-brand-border hover:border-brand-accent transition duration-300 relative flex flex-col h-full overflow-hidden group p-6 md:p-8 min-h-[250px]">
-                        <img src="size.jpeg" alt="Kirim Ukuran" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 group-hover:opacity-40 group-hover:scale-105 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/50 to-transparent z-0 pointer-events-none"></div>
+                    <article class="bg-black border border-brand-border hover:border-brand-accent transition duration-500 relative flex flex-col h-full overflow-hidden group min-h-[250px] md:min-h-[280px]">
+                        <img src="gambar-step-2.png" alt="Kirim Ukuran" class="absolute inset-0 w-full h-full object-cover z-0 opacity-70 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 group-hover:from-black/95 group-hover:via-black/70 transition-all duration-500 z-0 pointer-events-none"></div>
                         
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="absolute -top-2 -right-2 text-brand-accent font-black text-5xl opacity-40 font-heading transition duration-300 group-hover:opacity-80">#2</div>
-                            <div class="mt-auto pt-12">
-                                <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide drop-shadow-lg">Kirim Ukuran</h3>
-                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed drop-shadow-md">Customer mengirimkan daftar ukuran fix untuk ditotalkan. (tidak dapat mengubah total ukuran ketika sudah masuk produksi karena beresiko miskomunikasi dengan produksi).</p>
+                        <div class="absolute top-4 right-4 z-10 text-brand-accent font-black text-5xl md:text-6xl font-heading opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 drop-shadow-md">#2</div>
+                        
+                        <div class="relative z-10 h-full p-6 md:p-8 flex flex-col justify-end">
+                            <h3 class="font-heading font-black text-xl md:text-2xl text-white uppercase tracking-wide drop-shadow-lg group-hover:text-brand-accent transition-colors duration-300">Kirim Ukuran</h3>
+                            <div class="max-h-0 opacity-0 group-hover:max-h-[250px] group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden">
+                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed pt-3 drop-shadow-md">Customer mengirimkan daftar ukuran fix untuk ditotalkan. (tidak dapat mengubah total ukuran ketika sudah masuk produksi karena beresiko miskomunikasi dengan produksi).</p>
                             </div>
                         </div>
                     </article>
 
                     <!-- Step 3 -->
-                    <article class="bg-brand-panel border border-brand-border hover:border-brand-accent transition duration-300 relative flex flex-col h-full overflow-hidden group p-6 md:p-8 min-h-[250px]">
-                        <img src="invoice.jpeg" alt="DP & Invoice" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 group-hover:opacity-40 group-hover:scale-105 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/50 to-transparent z-0 pointer-events-none"></div>
+                    <article class="bg-black border border-brand-border hover:border-brand-accent transition duration-500 relative flex flex-col h-full overflow-hidden group min-h-[250px] md:min-h-[280px]">
+                        <img src="gambar-step-3.png" alt="DP & Invoice" class="absolute inset-0 w-full h-full object-cover z-0 opacity-70 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 group-hover:from-black/95 group-hover:via-black/70 transition-all duration-500 z-0 pointer-events-none"></div>
                         
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="absolute -top-2 -right-2 text-brand-accent font-black text-5xl opacity-40 font-heading transition duration-300 group-hover:opacity-80">#3</div>
-                            <div class="mt-auto pt-12">
-                                <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide drop-shadow-lg">DP & Invoice</h3>
-                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed drop-shadow-md">DP (Pembayaran uang muka) 50% dan pembuatan invoice.</p>
+                        <div class="absolute top-4 right-4 z-10 text-brand-accent font-black text-5xl md:text-6xl font-heading opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 drop-shadow-md">#3</div>
+                        
+                        <div class="relative z-10 h-full p-6 md:p-8 flex flex-col justify-end">
+                            <h3 class="font-heading font-black text-xl md:text-2xl text-white uppercase tracking-wide drop-shadow-lg group-hover:text-brand-accent transition-colors duration-300">DP & Invoice</h3>
+                            <div class="max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden">
+                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed pt-3 drop-shadow-md">DP (Pembayaran uang muka) 50% dan pembuatan invoice.</p>
                             </div>
                         </div>
                     </article>
 
                     <!-- Step 4 -->
-                    <article class="bg-brand-panel border border-brand-border hover:border-brand-accent transition duration-300 relative flex flex-col h-full overflow-hidden group p-6 md:p-8 min-h-[250px]">
-                        <img src="bahan.jpeg" alt="Persiapan Bahan" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 group-hover:opacity-40 group-hover:scale-105 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/50 to-transparent z-0 pointer-events-none"></div>
+                    <article class="bg-black border border-brand-border hover:border-brand-accent transition duration-500 relative flex flex-col h-full overflow-hidden group min-h-[250px] md:min-h-[280px]">
+                        <img src="gambar-step-4.png" alt="Persiapan Bahan" class="absolute inset-0 w-full h-full object-cover z-0 opacity-70 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 group-hover:from-black/95 group-hover:via-black/70 transition-all duration-500 z-0 pointer-events-none"></div>
                         
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="absolute -top-2 -right-2 text-brand-accent font-black text-5xl opacity-40 font-heading transition duration-300 group-hover:opacity-80">#4</div>
-                            <div class="mt-auto pt-12">
-                                <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide drop-shadow-lg">Persiapan Bahan</h3>
-                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed drop-shadow-md">Jika stok/bahan belum ready, memasuki proses pembelian bahan 2-5 hari kerja (apabila stok bahan di pabrik kain kosong, PO 1 Minggu di pabrik bahan).</p>
+                        <div class="absolute top-4 right-4 z-10 text-brand-accent font-black text-5xl md:text-6xl font-heading opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 drop-shadow-md">#4</div>
+                        
+                        <div class="relative z-10 h-full p-6 md:p-8 flex flex-col justify-end">
+                            <h3 class="font-heading font-black text-xl md:text-2xl text-white uppercase tracking-wide drop-shadow-lg group-hover:text-brand-accent transition-colors duration-300">Persiapan Bahan</h3>
+                            <div class="max-h-0 opacity-0 group-hover:max-h-[250px] group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden">
+                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed pt-3 drop-shadow-md">Jika stok/bahan belum ready, memasuki proses pembelian bahan 2-5 hari kerja (apabila stok bahan di pabrik kain kosong, PO 1 Minggu di pabrik bahan).</p>
                             </div>
                         </div>
                     </article>
 
                     <!-- Step 5 -->
-                    <article class="bg-brand-panel border border-brand-border hover:border-brand-accent transition duration-300 relative flex flex-col h-full overflow-hidden group p-6 md:p-8 min-h-[250px]">
-                        <img src="antiran_desain.jpeg" alt="Antrian Design" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 group-hover:opacity-40 group-hover:scale-105 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/50 to-transparent z-0 pointer-events-none"></div>
+                    <article class="bg-black border border-brand-border hover:border-brand-accent transition duration-500 relative flex flex-col h-full overflow-hidden group min-h-[250px] md:min-h-[280px]">
+                        <img src="gambar-step-5.png" alt="Antrian Design" class="absolute inset-0 w-full h-full object-cover z-0 opacity-70 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 group-hover:from-black/95 group-hover:via-black/70 transition-all duration-500 z-0 pointer-events-none"></div>
                         
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="absolute -top-2 -right-2 text-brand-accent font-black text-5xl opacity-40 font-heading transition duration-300 group-hover:opacity-80">#5</div>
-                            <div class="mt-auto pt-12">
-                                <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide drop-shadow-lg">Antrian Design</h3>
-                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed drop-shadow-md">Memasuki antrian design, proses design sesuai antrian. (sekitar 1-2 hari kerja sesuai tingkat kesulitan desain dan banyaknya antrian).</p>
+                        <div class="absolute top-4 right-4 z-10 text-brand-accent font-black text-5xl md:text-6xl font-heading opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 drop-shadow-md">#5</div>
+                        
+                        <div class="relative z-10 h-full p-6 md:p-8 flex flex-col justify-end">
+                            <h3 class="font-heading font-black text-xl md:text-2xl text-white uppercase tracking-wide drop-shadow-lg group-hover:text-brand-accent transition-colors duration-300">Antrian Design</h3>
+                            <div class="max-h-0 opacity-0 group-hover:max-h-[250px] group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden">
+                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed pt-3 drop-shadow-md">Memasuki antrian design, proses design sesuai antrian. (sekitar 1-2 hari kerja sesuai tingkat kesulitan desain dan banyaknya antrian).</p>
                             </div>
                         </div>
                     </article>
 
                     <!-- Step 6 -->
-                    <article class="bg-brand-panel border border-brand-border hover:border-brand-accent transition duration-300 relative flex flex-col h-full overflow-hidden group p-6 md:p-8 lg:col-span-2 xl:col-span-2 min-h-[250px]">
-                        <img src="produksi.jpeg" alt="Proses Produksi" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 group-hover:opacity-40 group-hover:scale-105 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/50 to-transparent z-0 pointer-events-none"></div>
+                    <article class="bg-black border border-brand-border hover:border-brand-accent transition duration-500 relative flex flex-col h-full overflow-hidden group lg:col-span-2 xl:col-span-2 min-h-[250px] md:min-h-[280px]">
+                        <img src="gambar-step-6.png" alt="Proses Produksi" class="absolute inset-0 w-full h-full object-cover z-0 opacity-70 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 group-hover:from-black/95 group-hover:via-black/70 transition-all duration-500 z-0 pointer-events-none"></div>
                         
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="absolute -top-2 -right-2 text-brand-accent font-black text-5xl opacity-40 font-heading transition duration-300 group-hover:opacity-80">#6</div>
-                            <div class="mt-auto pt-12">
-                                <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide drop-shadow-lg">Proses Produksi</h3>
-                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed drop-shadow-md max-w-2xl">Jika sudah fix design, bahan sudah ready, harap ditunggu sesuai deadline (jika lebih cepat atau ada keterlambatan ketika produksi admin akan mengupdate prosesnya ke konsumen).</p>
+                        <div class="absolute top-4 right-4 z-10 text-brand-accent font-black text-5xl md:text-6xl font-heading opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 drop-shadow-md">#6</div>
+                        
+                        <div class="relative z-10 h-full p-6 md:p-8 flex flex-col justify-end">
+                            <h3 class="font-heading font-black text-xl md:text-2xl text-white uppercase tracking-wide drop-shadow-lg group-hover:text-brand-accent transition-colors duration-300">Proses Produksi</h3>
+                            <div class="max-h-0 opacity-0 group-hover:max-h-[250px] group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden">
+                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed pt-3 drop-shadow-md max-w-2xl">Jika sudah fix design, bahan sudah ready, harap ditunggu sesuai deadline (jika lebih cepat atau ada keterlambatan ketika produksi admin akan mengupdate prosesnya ke konsumen).</p>
                             </div>
                         </div>
                     </article>
 
                     <!-- Step 7 -->
-                    <article class="bg-brand-panel border border-brand-border hover:border-brand-accent transition duration-300 relative flex flex-col h-full overflow-hidden group p-6 md:p-8 xl:col-span-1 min-h-[250px]">
-                        <img src="pengiriman.jpeg" alt="Pengiriman" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 group-hover:opacity-40 group-hover:scale-105 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/50 to-transparent z-0 pointer-events-none"></div>
+                    <article class="bg-black border border-brand-border hover:border-brand-accent transition duration-500 relative flex flex-col h-full overflow-hidden group xl:col-span-1 min-h-[250px] md:min-h-[280px]">
+                        <img src="gambar-step-7.png" alt="Pengiriman" class="absolute inset-0 w-full h-full object-cover z-0 opacity-70 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 group-hover:from-black/95 group-hover:via-black/70 transition-all duration-500 z-0 pointer-events-none"></div>
                         
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="absolute -top-2 -right-2 text-brand-accent font-black text-5xl opacity-40 font-heading transition duration-300 group-hover:opacity-80">#7</div>
-                            <div class="mt-auto pt-12">
-                                <h3 class="font-heading font-bold text-lg md:text-xl mb-3 text-white uppercase tracking-wide drop-shadow-lg">Pengiriman</h3>
-                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed drop-shadow-md">Pelunasan serta pengambilan pesanan di Offline Store maupun pengiriman.</p>
+                        <div class="absolute top-4 right-4 z-10 text-brand-accent font-black text-5xl md:text-6xl font-heading opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 drop-shadow-md">#7</div>
+                        
+                        <div class="relative z-10 h-full p-6 md:p-8 flex flex-col justify-end">
+                            <h3 class="font-heading font-black text-xl md:text-2xl text-white uppercase tracking-wide drop-shadow-lg group-hover:text-brand-accent transition-colors duration-300">Pengiriman</h3>
+                            <div class="max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden">
+                                <p class="text-xs md:text-sm text-gray-200 leading-relaxed pt-3 drop-shadow-md">Pelunasan serta pengambilan pesanan di Offline Store maupun pengiriman.</p>
                             </div>
                         </div>
                     </article>
@@ -499,7 +509,7 @@
                         <div class="flex flex-col md:flex-row gap-10 items-center justify-center max-w-5xl mx-auto">
                             <!-- Image Referensi -->
                             <div class="w-full md:w-1/2 flex justify-center">
-                                <img src="size.jpeg" alt="Size Chart Glomed" class="w-full max-w-md h-auto border border-brand-border shadow-lg" loading="lazy" />
+                                <img src="WhatsApp Image 2026-04-02 at 11.08.06.jpeg" alt="Size Chart Glomed" class="w-full max-w-md h-auto border border-brand-border shadow-lg" loading="lazy" />
                             </div>
                             <!-- Tabel Size Chart -->
                             <div class="w-full md:w-1/2">
@@ -579,7 +589,7 @@
                         <div class="overflow-hidden rounded-xl border border-[#2a3942] shadow-sm">
                             <div id="testiSlider" class="flex transition-transform duration-500 ease-in-out w-full select-none">
                                 <!-- Slide 1 -->
-                                <div class="w-full shrink-0">
+                                <div class="w-f shrink-0">
                                     <img src="testi-wa-1.jpeg" alt="Testimoni Real WhatsApp Customer 1" class="w-full h-auto object-cover pointer-events-none" loading="lazy">
                                 </div>
                                 <!-- Slide 2 -->
@@ -822,7 +832,6 @@
         <p class="text-[10px] md:text-xs font-mono tracking-widest uppercase">© 2026 Glomed&co Konveksi Sablon Kaos Custom T-Shirt Indonesia. All Rights Reserved.</p>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC (Deferred execution) -->
     <!-- JAVASCRIPT LOGIC (Deferred execution) -->
     <script defer>
         function sendToWhatsApp(event) {
