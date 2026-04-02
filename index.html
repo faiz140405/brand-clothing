@@ -580,15 +580,15 @@
                             <div id="testiSlider" class="flex transition-transform duration-500 ease-in-out w-full select-none">
                                 <!-- Slide 1 -->
                                 <div class="w-full shrink-0">
-                                    <img src="testi-wa-1.jpeg" alt="Testimoni Real WhatsApp Customer 1" class="w-full h-auto object-cover pointer-events-none" loading="lazy">
+                                    <img src="testi-wa-full-1.jpg" alt="Testimoni Real WhatsApp Customer 1" class="w-full h-auto object-cover pointer-events-none" loading="lazy">
                                 </div>
                                 <!-- Slide 2 -->
                                 <div class="w-full shrink-0">
-                                    <img src="testi-wa-2.jpeg" alt="Testimoni Real WhatsApp Customer 2" class="w-full h-auto object-cover pointer-events-none" loading="lazy">
+                                    <img src="testi-wa-full-2.jpg" alt="Testimoni Real WhatsApp Customer 2" class="w-full h-auto object-cover pointer-events-none" loading="lazy">
                                 </div>
                                 <!-- Slide 3 -->
                                 <div class="w-full shrink-0">
-                                    <img src="testi-wa-3.jpeg" alt="Testimoni Real WhatsApp Customer 3" class="w-full h-auto object-cover pointer-events-none" loading="lazy">
+                                    <img src="testi-wa-full-3.jpg" alt="Testimoni Real WhatsApp Customer 3" class="w-full h-auto object-cover pointer-events-none" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -609,13 +609,30 @@
                         </div>
                     </div>
 
-                    <!-- BANNER PENGIRIMAN -->
-                    <div class="relative bg-brand-panel border border-brand-border min-h-[300px] md:min-h-[350px] overflow-hidden group">
-                        <img src="paket.jpeg" alt="Pengiriman Kargo Besar Konveksi" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 z-0 bg-brand-bg">
-                        <div class="absolute bottom-4 left-4 right-4 bg-black/95 backdrop-blur-md border border-brand-border text-white p-4 md:p-6 text-center z-10 shadow-2xl">
-                            <i class="fas fa-truck-fast text-3xl md:text-4xl text-brand-accent mb-2 md:mb-3" aria-hidden="true"></i>
-                            <h4 class="font-heading font-black text-base md:text-xl uppercase tracking-wide text-white">Kirim Ke Seluruh Indonesia</h4>
-                            <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 font-mono">Via Kargo termurah, ongkir aman.</p>
+                    <!-- KANAN: CTA & BANNER PENGIRIMAN -->
+                    <div class="flex flex-col gap-6 md:gap-8">
+                        <!-- NEW CTA BOX -->
+                        <div class="bg-[#111] border border-brand-accent/50 p-6 md:p-8 relative overflow-hidden group shadow-[0_0_20px_rgba(204,255,0,0.05)]">
+                            <div class="absolute -right-10 -top-10 text-brand-accent/5 text-9xl font-black font-heading pointer-events-none group-hover:scale-110 transition-transform duration-700">?</div>
+                            <h3 class="font-heading font-black text-2xl md:text-3xl text-white mb-3 uppercase tracking-tighter relative z-10">
+                                MASIH RAGU BUAT <span class="text-brand-accent">MULAI?</span>
+                            </h3>
+                            <p class="text-brand-muted text-xs md:text-sm leading-relaxed mb-6 font-mono relative z-10">
+                                Uang lu aman! Kami kasih <span class="text-white font-bold border-b border-brand-accent">100% GARANSI PRODUKSI</span>. Jahitan miring atau sablon luntur? Kita ganti baru. Konsultasiin dulu aja konsep brand lu, GRATIS!
+                            </p>
+                            <button onclick="sendToWhatsApp(event)" aria-label="Konsultasi via WhatsApp" class="w-full inline-flex items-center justify-center bg-brand-accent text-black font-heading font-black text-sm md:text-base px-6 py-4 uppercase tracking-wide hover:bg-white transition shadow-[4px_4px_0px_rgba(255,255,255,0.2)] hover:shadow-[2px_2px_0px_rgba(255,255,255,0.5)] relative z-10">
+                                <i class="fab fa-whatsapp text-xl mr-2" aria-hidden="true"></i> KONSULTASI SEKARANG
+                            </button>
+                        </div>
+
+                        <!-- BANNER PENGIRIMAN -->
+                        <div class="relative bg-brand-panel border border-brand-border min-h-[250px] md:min-h-[300px] overflow-hidden group">
+                            <img src="paket.jpeg" alt="Pengiriman Kargo Besar Konveksi" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500 z-0 bg-brand-bg">
+                            <div class="absolute bottom-4 left-4 right-4 bg-black/95 backdrop-blur-md border border-brand-border text-white p-4 md:p-6 text-center z-10 shadow-2xl">
+                                <i class="fas fa-truck-fast text-3xl md:text-4xl text-brand-accent mb-2 md:mb-3" aria-hidden="true"></i>
+                                <h4 class="font-heading font-black text-base md:text-xl uppercase tracking-wide text-white">Kirim Ke Seluruh Indonesia</h4>
+                                <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 font-mono">Via Kargo termurah, ongkir aman.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
